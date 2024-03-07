@@ -34,23 +34,23 @@ import hrsh from '@images/projects-images/24 hrsh.png'
 
 export const projectsSlides: ProjectSlideProps[] = [
     {
-        url: '',
+        url: 'https://www.behance.net/gallery/164060455/Pharmbills-Redesign',
         name: 'Pharmbills',
         imgSrc: pharmbills,
     },
     {
-        url: '',
+        url: 'https://www.behance.net/gallery/148909183/Customary-Redesign',
         name: 'Customary',
         imgSrc: customary,
     },
     {
-        url: '',
+        url: 'https://www.behance.net/gallery/136608733/Anrobo-NFT-project',
         name: 'Anrobo',
         imgSrc: anrobo,
     },
 
     {
-        url: '',
+        url: 'https://www.behance.net/gallery/164665817/Pharmbills-academy-UIUX-Rebranding',
         name: 'Pharmbills academy',
         imgSrc: pharmbillsAcademy,
     },
@@ -193,7 +193,7 @@ export const allProjectsData: Project[] = [
         imgSrc: floorApp,
     },
     {
-        url: 'https://www.behance.net/gallery/148565557/Warmly-Redesign-mobile-app',
+        url: 'https://www.behance.net/gallery/156254005/UIUX-New-Horizon-Text-Extraction-File-Conversion-Tool',
         name: 'New Horizon',
         description: `For New Horizon, a file compression service, we designed an app that combines efficient file management with a user-friendly interface, simplifying digital storage solutions.`,
         imgSrc: newHorizon,

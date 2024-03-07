@@ -31,6 +31,14 @@ const pageConfig: PageConfig = {
         pageHeading: 'Contact',
         pageText: '',
     },
+    [routes.privacy]: {
+        pageHeading: 'Privacy Policy',
+        pageText: '',
+    },
+    [routes.terms]: {
+        pageHeading: 'Terms of Service',
+        pageText: '',
+    },
 }
 
 export const PageNavigation = () => {
@@ -78,11 +86,11 @@ export const PageNavigation = () => {
                 </span>
             </Link>
             <div
-                className={`${currentPage !== routes.contact ? 'flex' : 'hidden'} justify-between gap-[40px] mobile:flex-col desktop:flex-row-reverse`}
+                className={`flex h-fit justify-between gap-[40px] mobile:flex-col desktop:flex-row-reverse`}
             >
                 <motion.nav
                     layout
-                    className='flex min-h-full flex-col justify-end gap-[8px] self-stretch mobile:w-full mobile:max-w-[341px] desktop:w-[288px]'
+                    className='flex flex-col justify-end gap-[8px] mobile:w-full mobile:max-w-[341px] desktop:w-[288px]'
                 >
                     <NavLink href={routes.portfolio} currentPage={currentPage}>
                         All our projects

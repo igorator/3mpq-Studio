@@ -5,6 +5,8 @@ import { FooterNavItems } from '@components/Footer/FooterNavItems'
 import abstactSpiral from '@images/decorative/spiral.svg'
 import doubleCircle from '@images/decorative/double-circle.svg'
 import polkaDots from '@images/decorative/polka-dots.svg'
+import { ScrollToTopLink } from '@components/ScrollToTopLink'
+import { routes } from '@data/routes'
 
 export const Footer = () => {
     return (
@@ -48,8 +50,19 @@ export const Footer = () => {
                 </div>
 
                 <div className='flex border-r-[1px] pr-[64px] pt-[32px] mobile:invisible mobile:order-last mobile:justify-end  mobile:p-0 desktop:visible desktop:order-none desktop:items-end desktop:justify-start desktop:pr-[64px] desktop:pt-[32px]'>
-                    <div className='h-fit w-fit'>
-                        <Logo />
+                    <div className='flex h-fit w-fit flex-col font-secondary'>
+                        <ScrollToTopLink
+                            href={routes.privacy}
+                            className='opacity-20 transition-opacity duration-150 hover:opacity-100'
+                        >
+                            PRIVACY POLICY
+                        </ScrollToTopLink>
+                        <ScrollToTopLink
+                            href={routes.terms}
+                            className='opacity-20 transition-opacity duration-150 hover:opacity-100'
+                        >
+                            TERMS OF SERVICE
+                        </ScrollToTopLink>
                     </div>
                 </div>
 
