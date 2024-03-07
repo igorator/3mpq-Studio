@@ -1,0 +1,34 @@
+'use client'
+
+import { Button } from '@components/Buttons/Buttons'
+import { Logo } from '@components/Logo'
+import { HiddenMenuButton } from '@components/HiddenMenu/HiddenMenuButton'
+import { useMenu } from '@hooks/useMenu'
+import { motion } from 'framer-motion'
+import { routes } from '@data/routes'
+
+export const Header: React.FC = () => {
+    const { isMenuOpen, toggleMenu } = useMenu()
+
+    return (
+        <motion.header
+            id='header'
+            className='flex w-full max-w-[1440px] justify-between mobile:px-[12px] mobile:pt-[16px] desktop:px-[56px] desktop:pt-[32px]'
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 100 }}
+            transition={{ ease: 'easeInOut', duration: 1 }}
+        >
+            <Logo scroll={false} />
+
+            <div className='flex mobile:gap-[24px] desktop:gap-[40px]'>
+                <Button href={routes.contact} buttonType='highlighted'>
+                    Get in touch
+                </Button>
+                <HiddenMenuButton
+                    isPressed={isMenuOpen}
+                    openMenu={toggleMenu}
+                />
+            </div>
+        </motion.header>
+    )
+}

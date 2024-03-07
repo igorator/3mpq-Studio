@@ -1,0 +1,29 @@
+.flare {
+    box-shadow: 8px 8px 24px 0px rgba(0, 0, 0, 0.55);
+    pointer-events: none !important;
+    cursor: none !important;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    transition:
+        width 0.2s ease-in-out,
+        height 0.2s ease-in-out;
+}
+
+@media screen and (max-width: 768px) {
+    .flare {
+        width: 0;
+        height: 0;
+        transition:
+            width 0.2s ease-in-out,
+            height 0.2s ease-in-out,
+            opacity 0.2s ease-in-out;
+    }
+}
+
+.flare.pointer {
+    cursor: none;
+    transition:
+        width 0.2s ease-in-out,
+        height 0.2s ease-in-out,
+        opacity 0.2s ease-in-out;
+}
