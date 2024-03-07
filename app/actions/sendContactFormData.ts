@@ -9,25 +9,17 @@ export type ContactFormData = {
     agreement: boolean
 }
 
-const BASE_URL = ''
+const FORMSPARK_ACTION_URL = 'https://submit-form.com/iyybIECxy'
 
-export const sendContactFormData = async (data: ContactFormData) => {
-    let response = await fetch(BASE_URL, {
+export const sendContactFormData = async (message: ContactFormData) => {
+    const response = await fetch(FORMSPARK_ACTION_URL, {
         method: 'POST',
         headers: {
-            Authorization: ``,
+            'Content-Type': 'application/json',
+            Accept: 'application/json',
         },
         body: JSON.stringify({
-            data: [
-                {
-                    Lead_Source: '3mpq-studio',
-                    Last_Name: data.fullName,
-                    Email: data.email,
-                    Phone: data.phoneNumber,
-                    Company: data.companyName,
-                    Description: data.projectInfo,
-                },
-            ],
+            message,
         }),
     })
 
@@ -35,5 +27,6 @@ export const sendContactFormData = async (data: ContactFormData) => {
         throw new Error('Error sending contact form data')
     }
 
+    console.log(response)
     return response.json()
 }

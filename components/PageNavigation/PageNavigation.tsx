@@ -49,7 +49,7 @@ export const PageNavigation = () => {
         <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className={`flex w-full max-w-[1440px] flex-col mobile:gap-[40px] mobile:px-[12px] mobile:pb-[80px] mobile:pt-[56px] desktop:justify-end desktop:gap-[64px] desktop:px-[56px] desktop:pb-[64px] desktop:pt-[64px]`}
+            className={`flex w-full max-w-[1440px] flex-col mobile:gap-[40px] mobile:px-[12px] mobile:pb-[16px] mobile:pt-[56px] desktop:justify-end desktop:gap-[64px] desktop:px-[56px] desktop:pb-[64px] desktop:pt-[64px]`}
         >
             <Link
                 className={`flex w-full justify-between gap-[32px] transition duration-200 mobile:flex-col mobile:items-start mobile:hover:blur-0 desktop:flex-row desktop:items-center ${currentPage === routes.root ? 'cursor-default hover:blur-[0px]' : 'group desktop:hover:blur-[4px] '}`}
