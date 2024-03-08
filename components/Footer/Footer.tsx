@@ -49,7 +49,7 @@ export const Footer = () => {
                     />
                 </div>
 
-                <div className='flex border-r-[1px] pr-[64px] pt-[32px] mobile:invisible mobile:order-last mobile:justify-end  mobile:p-0 desktop:visible desktop:order-none desktop:items-end desktop:justify-start desktop:pr-[64px] desktop:pt-[32px]'>
+                <div className='flex border-r-[1px] pr-[64px] pt-[32px] mobile:order-last   mobile:p-0 desktop:order-none desktop:items-end desktop:justify-start desktop:pr-[64px] desktop:pt-[32px]'>
                     <div className='flex h-fit w-fit flex-col font-secondary'>
                         <ScrollToTopLink
                             href={routes.privacy}
