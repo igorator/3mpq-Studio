@@ -81,7 +81,7 @@ export const homePageProjectsData: Project[] = [
 
 export const allProjectsData: Project[] = [
     {
-        url: '',
+        url: 'https://www.behance.net/gallery/193443557/Smarterscout',
         name: 'Smarterscout',
         description: `Smarterscout is a cutting-edge scouting platform specializing in identifying and analyzing promising football talent. Leveraging advanced analytics, they offer comprehensive insights into player performance and potential`,
         imgSrc: smarterScout,
