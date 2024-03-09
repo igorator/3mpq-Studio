@@ -7,6 +7,8 @@ interface Project {
     url: string
     imgSrc: StaticImageData
 }
+
+import smarterScout from '@images/projects-images/0Smarterscout.png'
 import pharmbills from '@images/projects-images/1 Pharmbills.png'
 import customary from '@images/projects-images/2 Customary.png'
 import anrobo from '@images/projects-images/3 Anrobo.png'
@@ -78,6 +80,12 @@ export const homePageProjectsData: Project[] = [
 ]
 
 export const allProjectsData: Project[] = [
+    {
+        url: '',
+        name: 'Smarterscout',
+        description: `Smarterscout is a cutting-edge scouting platform specializing in identifying and analyzing promising football talent. Leveraging advanced analytics, they offer comprehensive insights into player performance and potential`,
+        imgSrc: smarterScout,
+    },
     {
         url: 'https://www.behance.net/gallery/164060455/Pharmbills-Redesign',
         name: 'Pharmbills',

@@ -1,4 +1,6 @@
 'use client'
+
+import Link from 'next/link'
 import { useState } from 'react'
 import { useForm } from 'react-hook-form'
 import { FormSubmitButton } from '@components/Buttons/Buttons'
@@ -14,6 +16,7 @@ import formSuccessIcon from '@icons/form-success.svg'
 import formRejectIcon from '@icons/form-error.svg'
 import formSuccessAnimation from '@animations/form-valid.gif'
 import formRejectAnimation from '@animations/form-invalid.gif'
+import { routes } from '@data/routes'
 
 const inputStyles = `rounded-none bg-transparent gap-[42px] font-secondary pb-[16px] text-[16px] leading-[200%] text-white placeholder:opacity-50 outline-none hover:placeholder:opacity-70 placeholder:visible focus:placeholder:invisible transition-all duration-150`
 
@@ -203,9 +206,15 @@ export const ContactForm = () => {
                                     htmlFor='agreement'
                                     className={`${errors['agreement'] ? 'text-[#CB4B59]' : 'text-white'} font-secondary text-[16px] leading-[200%]`}
                                 >
-                                    I agree to receive other communications from{' '}
-                                    <a className='text-white underline' href=''>
-                                        3mpq-studio
+                                    By submitting this form, you agree to the
+                                    processing of your personal data as
+                                    described in our{' '}
+                                    <a
+                                        className='font-bold text-white underline'
+                                        href={routes.privacy}
+                                        target='_blank'
+                                    >
+                                        Privacy Policy
                                     </a>
                                 </label>
                             </div>
