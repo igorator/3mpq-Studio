@@ -22,15 +22,19 @@ export const Footer = () => {
                     />
                     <ul className='text-16px text-none flex h-full flex-col justify-start font-secondary not-italic leading-[200%] mobile:items-start desktop:items-end '>
                         <li>
-                            <address className='not-italic'>
-                                4-8 LUDGATE CIRCUS, EC4M 7LF
+                            <address className='uppercase not-italic'>
+                                Web design & devlopment
                             </address>
                         </li>
                         <li>
-                            <address className='not-italic'>4-8 LONDON</address>
+                            <address className='uppercase not-italic'>
+                                3mpq
+                            </address>
                         </li>
                         <li>
-                            <address className='not-italic'>EC4M 7LF</address>
+                            <address className='uppercase not-italic'>
+                                Studio
+                            </address>
                         </li>
                     </ul>
                 </div>
