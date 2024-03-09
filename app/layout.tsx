@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { GoogleAnalytics } from '@next/third-parties/google'
 import { manrope, michroma, rubik } from '@ui/fonts'
 import '@ui/globals.css'
 import { PageWrapper } from '@components/PageWrapper'
@@ -29,6 +30,7 @@ export default function RootLayout({
                     <HiddenMenu />
                 </PageWrapper>
             </body>
+            <GoogleAnalytics gaId='G-FF942963RF' />
         </html>
     )
 }
