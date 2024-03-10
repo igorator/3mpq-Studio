@@ -17,7 +17,7 @@ import formSuccessAnimation from '@animations/form-valid.gif'
 import formRejectAnimation from '@animations/form-invalid.gif'
 import { routes } from '@data/routes'
 
-const inputStyles = `rounded-none bg-transparent gap-[42px] font-secondary pb-[16px] text-[16px] leading-[200%] text-white placeholder:opacity-50 outline-none hover:placeholder:opacity-70 placeholder:visible focus:placeholder:invisible transition-all duration-150`
+const inputStyles = `rounded-none w-full bg-transparent gap-[42px] font-secondary pb-[16px] text-[16px] leading-[200%] text-white placeholder:opacity-50 outline-none hover:placeholder:opacity-70 placeholder:visible focus:placeholder:invisible transition-all duration-150`
 
 enum FormState {
     Default = 'default',
@@ -58,7 +58,7 @@ export const ContactForm = () => {
                     >
                         <div className='flex w-full justify-between gap-[24px] mobile:flex-col desktop:flex-row'>
                             <div
-                                className={`flex flex-1 items-center justify-between border-b-[1px] ${errors['fullName'] ? 'border-[#CB4B59]' : 'border-white'} transition-all duration-150`}
+                                className={`flex flex-1 items-center justify-between gap-[24px] border-b-[1px] ${errors['fullName'] ? 'border-[#CB4B59]' : 'border-white'} transition-all duration-150`}
                             >
                                 <input
                                     className={inputStyles}
@@ -86,7 +86,7 @@ export const ContactForm = () => {
                             </div>
 
                             <div
-                                className={`flex flex-1 items-center justify-between border-b-[1px] ${errors['email'] ? 'border-[#CB4B59]' : 'border-white'} transition-all duration-150`}
+                                className={`flex flex-1 items-center justify-between gap-[24px] border-b-[1px] ${errors['email'] ? 'border-[#CB4B59]' : 'border-white'} transition-all duration-150`}
                             >
                                 <input
                                     className={inputStyles}
@@ -117,7 +117,7 @@ export const ContactForm = () => {
 
                         <div className='flex w-full justify-between gap-[24px] mobile:flex-col desktop:flex-row'>
                             <div
-                                className={`flex flex-1 items-center justify-between border-b-[1px]  ${errors['phoneNumber'] ? 'border-[#CB4B59]' : 'border-white'} transition-all duration-150`}
+                                className={`flex flex-1 items-center  justify-between  gap-[24px] border-b-[1px]  ${errors['phoneNumber'] ? 'border-[#CB4B59]' : 'border-white'} transition-all duration-150`}
                             >
                                 <InputMask
                                     className={inputStyles}
@@ -149,7 +149,7 @@ export const ContactForm = () => {
                             </div>
 
                             <div
-                                className={`flex flex-1  items-center justify-between border-b-[1px] ${errors['companyName'] ? 'border-[#CB4B59]' : 'border-white'} transition-all duration-150`}
+                                className={`flex flex-1 items-center justify-between gap-[24px] border-b-[1px] ${errors['companyName'] ? 'border-[#CB4B59]' : 'border-white'} transition-all duration-150`}
                             >
                                 <input
                                     className={inputStyles}
