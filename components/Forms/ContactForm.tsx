@@ -1,13 +1,12 @@
 'use client'
 
-import Link from 'next/link'
 import { useState } from 'react'
 import { useForm } from 'react-hook-form'
 import { FormSubmitButton } from '@components/Buttons/Buttons'
 import {
     sendContactFormData,
     type ContactFormData,
-} from 'app/actions/sendContactFormData'
+} from '@actions/sendContactFormData'
 import { InputMask } from '@react-input/mask'
 import { FormInputTooltip } from './FormInputTooltip'
 import { motion, AnimatePresence } from 'framer-motion'
