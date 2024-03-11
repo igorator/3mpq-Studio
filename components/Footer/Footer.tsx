@@ -59,19 +59,19 @@ export const Footer = () => {
                     <div className='flex h-fit w-fit flex-col font-secondary'>
                         <ScrollToTopLink
                             href={routes.cookies}
-                            className='opacity-20 transition-opacity duration-150 hover:opacity-100'
+                            className='leading-[200%] opacity-20 transition-opacity duration-150 hover:opacity-100'
                         >
                             COOKIE POLICY
                         </ScrollToTopLink>
                         <ScrollToTopLink
                             href={routes.privacy}
-                            className='opacity-20 transition-opacity duration-150 hover:opacity-100'
+                            className='leading-[200%] opacity-20 transition-opacity duration-150 hover:opacity-100'
                         >
                             PRIVACY POLICY
                         </ScrollToTopLink>
                         <ScrollToTopLink
                             href={routes.terms}
-                            className='opacity-20 transition-opacity duration-150 hover:opacity-100'
+                            className='leading-[200%] opacity-20 transition-opacity duration-150 hover:opacity-100'
                         >
                             TERMS OF SERVICE
                         </ScrollToTopLink>
