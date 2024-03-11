@@ -39,6 +39,10 @@ const pageConfig: PageConfig = {
         pageHeading: 'Terms of Service',
         pageText: '',
     },
+    [routes.cookies]: {
+        pageHeading: 'Cookie Policy',
+        pageText: '',
+    },
 }
 
 export const PageNavigation = () => {

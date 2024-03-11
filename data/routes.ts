@@ -4,4 +4,5 @@ export const routes = {
     portfolio: '/portfolio',
     privacy: '/privacy-policy',
     terms: '/terms',
+    cookies: '/cookies-policy',
 }

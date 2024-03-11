@@ -15,7 +15,7 @@ export const NavLink: React.FC<NavLink> = ({ children, href, currentPage }) => {
     return (
         <motion.div exit={{ x: -20 }}>
             <Link
-                className={`flex w-full justify-between rounded-[5px] py-[8px] text-center font-primary text-[16px] leading-[170%] transition duration-200 ease-in-out desktop:hover:blur-[2px] ${href === currentPage || currentPage === routes.contact || currentPage === routes.privacy || currentPage === routes.terms ? 'hidden' : ''}`}
+                className={`flex w-full justify-between rounded-[5px] py-[8px] text-center font-primary text-[16px] leading-[170%] transition duration-200 ease-in-out desktop:hover:blur-[2px] ${href === currentPage || currentPage !== routes.root ? 'hidden' : ''}`}
                 href={href}
                 scroll={false}
             >

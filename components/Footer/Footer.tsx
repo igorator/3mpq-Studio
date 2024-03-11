@@ -55,8 +55,14 @@ export const Footer = () => {
                     />
                 </div>
 
-                <div className='flex border-r-[1px] pr-[64px] pt-[32px] mobile:order-last   mobile:p-0 desktop:order-none desktop:items-end desktop:justify-start desktop:pr-[64px] desktop:pt-[32px]'>
+                <div className='flex border-r-[1px] pr-[64px] pt-[32px] mobile:order-last mobile:p-0 desktop:order-none desktop:items-end desktop:justify-start desktop:pr-[64px] desktop:pt-[32px]'>
                     <div className='flex h-fit w-fit flex-col font-secondary'>
+                        <ScrollToTopLink
+                            href={routes.cookies}
+                            className='opacity-20 transition-opacity duration-150 hover:opacity-100'
+                        >
+                            COOKIE POLICY
+                        </ScrollToTopLink>
                         <ScrollToTopLink
                             href={routes.privacy}
                             className='opacity-20 transition-opacity duration-150 hover:opacity-100'

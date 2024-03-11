@@ -210,7 +210,7 @@ export const ContactForm = () => {
                                     described in our{' '}
                                     <a
                                         className='font-bold text-white underline'
-                                        href={routes.privacy}
+                                        href={routes.cookies}
                                         target='_blank'
                                     >
                                         Privacy Policy
