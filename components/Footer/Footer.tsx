@@ -1,12 +1,11 @@
 import Image from 'next/image'
-import { Logo } from '@components/Logo'
 import { ScrollToTopButton } from '@components/Buttons/ScrollToTopButton'
 import { FooterNavItems } from '@components/Footer/FooterNavItems'
+import { ScrollToTopLink } from '@components/ScrollToTopLink'
+import { routes } from '@data/routes'
 import abstactSpiral from '@images/decorative/spiral.svg'
 import doubleCircle from '@images/decorative/double-circle.svg'
 import polkaDots from '@images/decorative/polka-dots.svg'
-import { ScrollToTopLink } from '@components/ScrollToTopLink'
-import { routes } from '@data/routes'
 
 export const Footer = () => {
     return (
@@ -27,9 +26,12 @@ export const Footer = () => {
                             </address>
                         </li>
                         <li>
-                            <address className='uppercase not-italic'>
-                                3mpq
-                            </address>
+                            <a
+                                href='mailto:info@3mpq.com?subject=3mpq-studio'
+                                className='uppercase not-italic'
+                            >
+                                INFO@3MPQ.COM
+                            </a>
                         </li>
                         <li>
                             <address className='uppercase not-italic'>
