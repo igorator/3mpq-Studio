@@ -1,4 +1,3 @@
-'use client'
 import { DefaultText } from '@components/Text'
 
 interface GenerateNumberStringProps {

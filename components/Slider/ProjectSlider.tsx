@@ -5,8 +5,8 @@ import { Mousewheel } from 'swiper/modules'
 import {
     ProjectSlide,
     ProjectSlideProps,
-} from '@components/Sliders/ProjectsSlider/ProjectsSlide'
-import { LinkSliderButton } from '@components/Sliders/SliderButtons'
+} from '@components/Slider/ProjectSlide'
+import { LinkSliderButton } from '@components/Slider/SliderButtons'
 import { routes } from '@data/routes'
 
 type SliderProps = {
@@ -19,11 +19,9 @@ export const ProjectsSlider: React.FC<SliderProps> = ({ slides }) => {
             spaceBetween={24}
             direction='horizontal'
             modules={[Mousewheel]}
-            draggable={true}
             mousewheel={{
                 forceToAxis: true,
             }}
-            parallax={true}
             slidesPerGroupSkip={1}
             slidesPerView={'auto'}
             onSlideChange={() => {}}
