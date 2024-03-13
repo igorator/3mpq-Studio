@@ -1,5 +1,5 @@
 import { StaticImageData } from 'next/image'
-import { ProjectSlideProps } from '@components/Sliders/ProjectsSlider/ProjectsSlide'
+import { ProjectSlideProps } from '@components/Slider/ProjectSlide'
 
 interface Project {
     name: string
