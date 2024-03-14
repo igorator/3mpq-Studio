@@ -15,7 +15,7 @@ export const TermsCard = ({ title, text }: TermsCardsProps) => {
             <span className='font-secondary text-[22px] font-bold leading-[120%] text-white'>
                 {title}
             </span>
-            <p className=' font-secondary text-[16px] leading-[200%] text-white'>
+            <p className='whitespace-pre-line font-secondary text-[16px] leading-[200%] text-white'>
                 {text}
             </p>
         </motion.div>
