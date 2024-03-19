@@ -5,28 +5,14 @@ import Image from 'next/image'
 import { useEffect } from 'react'
 import { useMenu } from '@hooks/useMenu'
 import { anchorLinks } from '@data/achor-links'
-import xIcon from '@social-icons/x.svg'
-import linkedinIcon from '@social-icons/linkedin.svg'
-import facebookIcon from '@social-icons/facebook.svg'
-import instagramIcon from '@social-icons/instagram.svg'
+import upworkIcon from '@social-icons/upwork.svg'
 import closeArrow from '@icons/close-arrow.svg'
 
 const socialLinks = [
-    { iconSrc: xIcon, url: 'https://twitter.com/', title: 'X' },
     {
-        iconSrc: linkedinIcon,
-        url: 'https://www.linkedin.com/',
-        title: 'LinkedIn',
-    },
-    {
-        iconSrc: facebookIcon,
-        url: 'https://www.facebook.com/',
-        title: 'Facebook',
-    },
-    {
-        iconSrc: instagramIcon,
-        url: 'https://www.instagram.com/',
-        title: 'Instagram',
+        iconSrc: upworkIcon,
+        url: 'https://www.upwork.com/agencies/1765713627303276544/',
+        title: 'upwork',
     },
 ]
 
