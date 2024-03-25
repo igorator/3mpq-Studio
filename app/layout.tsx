@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { GoogleAnalytics } from '@next/third-parties/google'
+import { MicrosoftClarity } from '@components/Metrics/Clarity'
 import { manrope, michroma, rubik } from '@ui/fonts'
 import '@ui/globals.css'
 import { PageWrapper } from '@components/PageWrapper'
@@ -31,6 +32,7 @@ export default function RootLayout({
                 </PageWrapper>
             </body>
             <GoogleAnalytics gaId='G-FF942963RF' />
+            <MicrosoftClarity id='lm6fh7n55' />
         </html>
     )
 }
