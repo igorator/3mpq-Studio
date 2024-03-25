@@ -30,7 +30,7 @@ export default function RootLayout({
                     <HiddenMenu />
                 </PageWrapper>
             </body>
-            <GoogleTagManager gtmId='GTM-N69VRBDT' />
+            <GoogleTagManager gtmId='GTM-PHT5T3DS' />
         </html>
     )
 }
