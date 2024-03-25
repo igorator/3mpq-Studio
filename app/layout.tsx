@@ -1,6 +1,5 @@
 import type { Metadata } from 'next'
-import { GoogleAnalytics } from '@next/third-parties/google'
-import { MicrosoftClarity } from '@components/Metrics/Clarity'
+import { GoogleTagManager } from '@next/third-parties/google'
 import { manrope, michroma, rubik } from '@ui/fonts'
 import '@ui/globals.css'
 import { PageWrapper } from '@components/PageWrapper'
@@ -11,7 +10,7 @@ export const metadata: Metadata = {
     title: '3mpq Studio',
     description:
         'Welcome to 3mpq Studio, where creativity meets innovation in a virtual design haven, blending elegance and functionality seamlessly to inspire your next masterpiece.',
-    metadataBase: new URL('https://3mpq-studio.vercel.app'),
+    metadataBase: new URL('https://3mpq-studio.com'),
 }
 
 export default function RootLayout({
@@ -31,8 +30,7 @@ export default function RootLayout({
                     <HiddenMenu />
                 </PageWrapper>
             </body>
-            <GoogleAnalytics gaId='G-FF942963RF' />
-            <MicrosoftClarity id='lm6fh7n55' />
+            <GoogleTagManager gtmId='GTM-N69VRBDT' />
         </html>
     )
 }
