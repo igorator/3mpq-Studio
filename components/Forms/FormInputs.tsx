@@ -24,7 +24,7 @@ export const FormInput: React.FC<FormInputProps> = ({
 }) => {
     return (
         <div
-            className={`flex flex-1 items-center justify-between border-b-[1px] ${errors ? 'border-[#CB4B59]' : 'border-white'} gap-[24px] transition-all duration-150`}
+            className={`flex flex-1 items-center justify-between gap-[24px] border-b-[1px] ${errors ? 'border-[#CB4B59]' : 'border-white'} gap-[24px] transition-all duration-150`}
         >
             <input
                 className={`w-full gap-[42px] rounded-none bg-transparent pb-[16px] font-secondary text-[16px] leading-[200%] text-white outline-none transition-all duration-150 placeholder:visible placeholder:opacity-50 hover:placeholder:opacity-70 focus:placeholder:invisible`}
@@ -53,10 +53,10 @@ export const MaskFormInput: React.FC<MaskFormInputProps> = ({
 }) => {
     return (
         <div
-            className={`flex flex-1 items-center justify-between border-b-[1px] ${errors ? 'border-[#CB4B59]' : 'border-white'} transition-all duration-150`}
+            className={`flex flex-1 items-center justify-between gap-[24px] border-b-[1px] ${errors ? 'border-[#CB4B59]' : 'border-white'} transition-all duration-150`}
         >
             <InputMask
-                className={`gap-[42px] rounded-none bg-transparent pb-[16px] font-secondary text-[16px] leading-[200%] text-white outline-none transition-all duration-150 placeholder:visible placeholder:opacity-50 hover:placeholder:opacity-70 focus:placeholder:invisible`}
+                className={`w-full gap-[42px] rounded-none bg-transparent pb-[16px] font-secondary text-[16px] leading-[200%] text-white outline-none transition-all duration-150 placeholder:visible placeholder:opacity-50 hover:placeholder:opacity-70 focus:placeholder:invisible`}
                 mask={mask}
                 placeholder={placeholder}
                 autoComplete='off'
