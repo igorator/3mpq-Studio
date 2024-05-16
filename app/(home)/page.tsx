@@ -3,6 +3,7 @@ import { Services } from '@sections/Services'
 import { Timeline } from '@sections/Timeline'
 import { Projects } from '@sections/Projects'
 import { Compass } from '@sections/Compass'
+import { ContactUs } from '@sections/ContactUs'
 import { homePageProjectsData } from '@data/projects-data'
 import { MainAnimationWrapper } from '@components/PageAnimations/HomeAnimationWrapper'
 import { servicesData } from '@data/services-data'
@@ -20,6 +21,7 @@ export default function Home() {
             />
             <Compass id='compass' />
             <Projects id='projects' projects={homePageProjectsData} />
+            <ContactUs />
         </main>
     )
 }

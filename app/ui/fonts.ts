@@ -1,11 +1,4 @@
-import { Michroma, Manrope, Rubik } from 'next/font/google'
-
-export const michroma = Michroma({
-    subsets: ['latin'],
-    weight: '400',
-    display: 'swap',
-    variable: '--font-primary',
-})
+import { Manrope, Rubik } from 'next/font/google'
 
 export const manrope = Manrope({
     subsets: ['latin'],

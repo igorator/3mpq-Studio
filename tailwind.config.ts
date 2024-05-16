@@ -33,7 +33,7 @@ const config: Config = {
                     'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
             },
             fontFamily: {
-                primary: ['var(--font-primary)'],
+                primary: ['var(--font-geist-mono)'],
                 secondary: ['var(--font-secondary)'],
                 accent: ['var(--font-accent)'],
             },

@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { GoogleTagManager } from '@next/third-parties/google'
-import { manrope, michroma, rubik } from '@ui/fonts'
+import { manrope, rubik } from '@ui/fonts'
+import { GeistMono } from 'geist/font/mono'
 import '@ui/globals.css'
 import { PageWrapper } from '@components/PageWrapper'
 import { HiddenMenu } from '@components/HiddenMenu/HiddenMenu'
@@ -21,7 +22,7 @@ export default function RootLayout({
     return (
         <html
             lang='en'
-            className={`${manrope.variable} ${michroma.variable} ${rubik.variable} relative`}
+            className={`${GeistMono.variable} ${manrope.variable} ${rubik.variable} relative`}
         >
             <body className='bg-black'>
                 <PageWrapper>
