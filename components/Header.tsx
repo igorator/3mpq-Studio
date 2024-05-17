@@ -1,6 +1,6 @@
 'use client'
 
-import { Button } from '@components/Buttons/Buttons'
+import { Button } from '@components/Buttons/DefaultButton'
 import { Logo } from '@components/Logo'
 import { HiddenMenuButton } from '@components/HiddenMenu/HiddenMenuButton'
 import { useMenu } from '@hooks/useMenu'

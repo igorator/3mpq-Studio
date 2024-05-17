@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import { useForm } from 'react-hook-form'
-import { FormSubmitButton } from '@components/Buttons/Buttons'
+import { FormSubmitButton } from '@components/Buttons/FormSubmitButton'
 import {
     sendContactFormData,
     type ContactFormData,

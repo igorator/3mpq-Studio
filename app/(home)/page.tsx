@@ -7,6 +7,8 @@ import { ContactUs } from '@sections/ContactUs'
 import { homePageProjectsData } from '@data/projects-data'
 import { MainAnimationWrapper } from '@components/PageAnimations/HomeAnimationWrapper'
 import { servicesData } from '@data/services-data'
+import { Pricing } from '@sections/Pricing'
+import { pricingCardsData } from '@data/pricing-data'
 
 export default function Home() {
     return (
@@ -19,6 +21,7 @@ export default function Home() {
                 id='about'
                 text='We blend innovative design with cutting-edge technology to craft digital experiences that resonate. Our expertise spans React, Next.js, Vue.js, Tailwind, TypeScript, Node.js, Ruby on Rails, PostgreSQL, and Webflow, ensuring we deliver solutions that are not only visually stunning but highly functional. Explore our portfolio to see our dedication to excellence. If our approach to seamless design and robust development strikes a chord, we`ve achieved our mission. Let`s create something extraordinary together.'
             />
+            <Pricing id='pricing' pricingCardsData={pricingCardsData} />
             <Compass id='compass' />
             <Projects id='projects' projects={homePageProjectsData} />
             <ContactUs />
