@@ -9,7 +9,11 @@ export type ContactFormData = {
     agreement: boolean
 }
 
-const FORMSPARK_ACTION_URL = 'https://submit-form.com/iyybIECxy'
+const FORMSPARK_ACTION_URL = process.env.FORMSPARK_ACTION_URL
+
+if (!FORMSPARK_ACTION_URL) {
+    throw new Error('FORMSPARK_ACTION_URL is not defined')
+}
 
 export const sendContactFormData = async (message: ContactFormData) => {
     const response = await fetch(FORMSPARK_ACTION_URL, {
