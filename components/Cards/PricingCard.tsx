@@ -9,7 +9,7 @@ export const PricingCard: React.FC<{ pricingCardData: PricingCardData }> = ({
     const { heading, price, subtext, benefits, isMostPopular } = pricingCardData
     return (
         <div
-            className={`relative flex flex-col items-center justify-between border-white mobile:px-[16px] desktop:px-[56px] desktop:py-[40px] ${isMostPopular ? 'border-[2px] border-opacity-100' : 'border-[1px]  border-opacity-20'}`}
+            className={`relative flex flex-col items-center justify-between border-white py-[40px] mobile:px-[16px] desktop:px-[56px] ${isMostPopular ? 'border-[2px] border-opacity-100' : 'border-[1px]  border-opacity-20'}`}
         >
             {isMostPopular ? (
                 <div className='absolute top-[-20px] flex w-full max-w-[133px] items-center justify-center rounded-[42px] bg-white px-[12px] py-[4px] font-semibold text-[#212121]'>

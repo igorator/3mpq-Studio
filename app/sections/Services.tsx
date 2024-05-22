@@ -10,7 +10,7 @@ export const Services: React.FC<{
         <Section
             id={id}
             fullWidth={true}
-            addStyles='mobile:mt-[-16px] mobile:pt-[16px] desktop:mt-[-40px] desktop:pt-[40px]'
+            addStyles='mobile:pt-[16px] desktop:pt-[150px]'
         >
             <div className='relative flex w-full justify-between gap-[80px] desktop:max-w-[1328px]'>
                 <div className='flex w-full shrink flex-col gap-[64px]'>

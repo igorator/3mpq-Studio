@@ -6,17 +6,18 @@ import { ProjectCard } from '@components/Cards/ProjectCard'
 
 export const Projects: React.FC<{
     id: string
+    page?: boolean
     projects: {
         imgSrc: StaticImageData
         name: string
         description: string
         url: string
     }[]
-}> = ({ id, projects }) => {
+}> = ({ id, projects, page }) => {
     return (
         <Section
             id={id}
-            addStyles='mobile:mt-[-16px] mobile:pt-[16px] desktop:mt-[-40px] desktop:pt-[40px]'
+            addStyles={`${page ? '' : 'mobile:pt-[80px] desktop:pt-[150px]'}`}
         >
             <div className='flex w-full flex-col mobile:gap-0 desktop:gap-[64px]'>
                 <Heading headingLevel={2} additionalStyles='mobile:text-[32px]'>

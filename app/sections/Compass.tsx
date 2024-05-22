@@ -12,7 +12,7 @@ export const Compass: React.FC<{ id: string }> = ({ id }) => {
     return (
         <Section
             id={id}
-            addStyles='flex-col gap-[64px] mobile:mt-[-16px] mobile:pt-[16px] desktop:mt-[-40px] desktop:pt-[40px]'
+            addStyles='flex-col gap-[64px] mobile:pt-[80px] desktop:pt-[150px]'
         >
             <div className='flex h-fit w-full flex-col justify-between gap-[64px]'>
                 <div className='flex flex-col gap-[24px]'>

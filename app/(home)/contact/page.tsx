@@ -3,9 +3,9 @@ import { MainAnimationWrapper } from '@components/PageAnimations/HomeAnimationWr
 
 export default function ContactPage() {
     return (
-        <main className='relative flex w-full flex-col items-center mobile:gap-[80px] mobile:pb-[80px] desktop:gap-[150px] desktop:pb-[120px]'>
+        <main className='relative flex w-full flex-col items-center mobile:pb-[80px] desktop:pb-[120px]'>
             <MainAnimationWrapper>
-                <ContactUs />
+                <ContactUs page />
             </MainAnimationWrapper>
         </main>
     )

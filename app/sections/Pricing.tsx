@@ -7,7 +7,7 @@ export const Pricing: React.FC<{
     pricingCardsData: PricingCardData[]
 }> = ({ id, pricingCardsData }) => {
     return (
-        <Section id={id} addStyles='pt-[100px] mt-[-100px]'>
+        <Section id={id} addStyles='mobile:pt-[80px] desktop:pt-[150px]'>
             <div className='grid w-full gap-[24px] mobile:grid-cols-1 mobile:gap-[36px] desktop:grid-cols-3'>
                 {pricingCardsData.map((card) => (
                     <PricingCard
