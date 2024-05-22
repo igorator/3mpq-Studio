@@ -8,6 +8,10 @@ export const anchorLinks = [
         url: `/#services`,
     },
     {
+        title: 'Pricing',
+        url: `/#pricing`,
+    },
+    {
         title: 'About Us',
         url: `/#about`,
     },

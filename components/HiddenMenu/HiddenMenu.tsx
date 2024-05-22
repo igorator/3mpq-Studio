@@ -6,13 +6,20 @@ import { useEffect } from 'react'
 import { useMenu } from '@hooks/useMenu'
 import { anchorLinks } from '@data/achor-links'
 import upworkIcon from '@social-icons/upwork.svg'
+import behanceIcon from '@social-icons/behance.svg'
 import closeArrow from '@icons/close-arrow.svg'
 
 const socialLinks = [
     {
         iconSrc: upworkIcon,
-        url: 'https://www.upwork.com/agencies/1765713627303276544/',
+        url: 'https://www.upwork.com/agencies/3mpq',
         title: 'upwork',
+    },
+
+    {
+        iconSrc: behanceIcon,
+        url: 'https://www.behance.net/empq',
+        title: 'behance',
     },
 ]
 
@@ -77,7 +84,7 @@ export const HiddenMenu = () => {
                             )
                         )}
                     </menu>
-                    <menu className='flex list-none gap-[24px] mobile:flex-row mobile:justify-start desktop:flex-col desktop:justify-between'>
+                    <menu className='flex list-none gap-[24px] mobile:flex-row mobile:justify-start desktop:flex-col '>
                         {socialLinks &&
                             socialLinks.map(
                                 (link: {

@@ -24,7 +24,7 @@ export default function Home() {
             <Pricing id='pricing' pricingCardsData={pricingCardsData} />
             <Compass id='compass' />
             <Projects id='projects' projects={homePageProjectsData} />
-            <ContactUs />
+            <ContactUs heading />
         </main>
     )
 }

@@ -6,6 +6,8 @@ import { routes } from '@data/routes'
 import abstactSpiral from '@images/decorative/spiral.svg'
 import doubleCircle from '@images/decorative/double-circle.svg'
 import polkaDots from '@images/decorative/polka-dots.svg'
+import upworkIcon from '@social-icons/upwork.svg'
+import behanceIcon from '@social-icons/behance.svg'
 
 export const Footer = () => {
     return (
@@ -42,8 +44,27 @@ export const Footer = () => {
                 </div>
 
                 <div className='order-first items-end justify-between mobile:p-0 desktop:order-none desktop:flex desktop:border-b-[1px] desktop:pb-[32px] desktop:pl-[64px]'>
-                    <div className='flex h-full justify-between pt-[5px] mobile:flex-row desktop:flex-col'>
+                    <div className='flex h-full flex-wrap justify-between pt-[5px] mobile:flex-row desktop:flex-col'>
                         <ScrollToTopButton />
+
+                        <div className='flex items-center justify-between gap-[20px]'>
+                            <a href='https://www.behance.net/empq'>
+                                <Image
+                                    src={behanceIcon}
+                                    alt={'Behance'}
+                                    sizes='24'
+                                    className='h-[24px] w-[24px]'
+                                />
+                            </a>
+                            <a href='https://www.upwork.com/agencies/3mpq'>
+                                <Image
+                                    src={upworkIcon}
+                                    alt={'Upwork'}
+                                    sizes='24'
+                                    className='h-[24px] w-[24px]'
+                                />
+                            </a>
+                        </div>
                     </div>
 
                     <Image
