@@ -20,9 +20,14 @@ export const Projects: React.FC<{
             addStyles={`${page ? '' : 'mobile:pt-[80px] desktop:pt-[150px]'}`}
         >
             <div className='flex w-full flex-col mobile:gap-0 desktop:gap-[64px]'>
-                <Heading headingLevel={2} additionalStyles='mobile:text-[32px]'>
-                    All our projects
-                </Heading>
+                {!page && (
+                    <Heading
+                        headingLevel={2}
+                        additionalStyles='mobile:text-[32px]'
+                    >
+                        All our projects
+                    </Heading>
+                )}
                 <div className='flex w-full flex-col overflow-hidden'>
                     <div className='relative'></div>
                     {projects.map((project, index) => (

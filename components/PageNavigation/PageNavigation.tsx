@@ -43,11 +43,15 @@ const pageConfig: PageConfig = {
         pageHeading: 'Cookie Policy',
         pageText: '',
     },
+    [routes.offers]: {
+        pageHeading: 'Offers',
+        pageText: '',
+    },
 }
 
 export const PageNavigation = () => {
     const currentPage: string = usePathname()
-    const { pageHeading, pageText } = pageConfig[currentPage]
+    const { pageHeading, pageText } = pageConfig[currentPage] || ['', '']
 
     return (
         <motion.div

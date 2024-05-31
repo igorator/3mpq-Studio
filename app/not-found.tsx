@@ -5,7 +5,7 @@ import { FooterNavItems } from '@components/Footer/FooterNavItems'
 
 export default function NotFound() {
     return (
-        <main className='flex h-[90dvh] w-full max-w-[1440px] flex-col justify-between '>
+        <main className='flex h-[90dvh] w-full max-w-[1440px] flex-col justify-between mobile:px-[16px] desktop:px-[64px]'>
             <header className='flex w-full max-w-[1440px] justify-between mobile:pt-[16px] desktop:pt-[32px]'>
                 <Logo scroll={false} />
             </header>

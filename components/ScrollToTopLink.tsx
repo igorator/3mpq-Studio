@@ -7,14 +7,24 @@ export const ScrollToTopLink: React.FC<{
     href: string
     className?: string
     children: React.ReactNode
-    scrollBehavior?: string
-}> = ({ href, className, children }) => {
+    onClick?: () => void
+}> = ({ href, className, children, onClick }) => {
     const lenisInstance = useLenisStore((state) => state.lenisInstance)
+
+    const handleClick = () => {
+        if (lenisInstance) {
+            lenisInstance.scrollTo('top')
+        }
+        if (onClick) {
+            onClick()
+        }
+    }
+
     return (
         <Link
             href={href}
             className={className}
-            onClick={() => lenisInstance?.scrollTo('top')}
+            onClick={handleClick}
             scroll={false}
         >
             {children}

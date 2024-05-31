@@ -8,6 +8,9 @@ import { anchorLinks } from '@data/achor-links'
 import upworkIcon from '@social-icons/upwork.svg'
 import behanceIcon from '@social-icons/behance.svg'
 import closeArrow from '@icons/close-arrow.svg'
+import offersAnimation from '@animations/offers.gif'
+import { ScrollToTopLink } from '@components/ScrollToTopLink'
+import { routes } from '@data/routes'
 
 const socialLinks = [
     {
@@ -49,7 +52,7 @@ export const HiddenMenu = () => {
             onClick={toggleMenu}
             className={`${
                 isMenuOpen ? `visible opacity-100` : `invisible opacity-0`
-            } z-1000 fixed left-0 right-0 top-0 flex h-[100dvh] w-full flex-col items-center bg-black bg-opacity-60 text-white transition-all duration-300 mobile:pt-[32px] desktop:pt-[46px]`}
+            } z-1000 fixed left-0 right-0 top-0 flex h-[100dvh] w-full flex-col items-center bg-black bg-opacity-80 text-white transition-all duration-300 mobile:pt-[32px] desktop:pt-[46px]`}
         >
             <div className='flex h-full w-full flex-col items-end gap-[40px] mobile:px-[12px] desktop:max-w-[1440px] desktop:px-[56px] '>
                 <button>
@@ -62,54 +65,90 @@ export const HiddenMenu = () => {
                     />
                 </button>
 
-                <nav
+                <div
+                    className='flex w-full justify-end gap-[40px] mobile:flex-col-reverse desktop:flex-row'
                     onClick={(e) => {
                         e.stopPropagation()
                     }}
-                    className={`flex justify-between rounded-[5px] bg-[#212121] bg-opacity-60 backdrop-blur-[12px] mobile:w-full mobile:flex-col mobile:gap-[24px] mobile:p-[12px] desktop:w-[478px] desktop:flex-row desktop:gap-[40px] desktop:px-[80px] desktop:py-[40px]`}
                 >
-                    <menu className='flex flex-col justify-between gap-[16px] font-primary text-[16px] uppercase mobile:list-none desktop:list-disc'>
-                        {anchorLinks.map(
-                            (link: {
-                                title: string
-                                url: string
-                            }): React.ReactNode => (
-                                <li
-                                    onClick={toggleMenu}
-                                    key={link.title}
-                                    className='transition-filter ease w-fit cursor-pointer duration-150 hover:pl-[24px] hover:blur-[2px]'
-                                >
-                                    <Link href={link.url}>{link.title}</Link>
-                                </li>
-                            )
-                        )}
-                    </menu>
-                    <menu className='flex list-none gap-[24px] mobile:flex-row mobile:justify-start desktop:flex-col '>
-                        {socialLinks &&
-                            socialLinks.map(
+                    <ScrollToTopLink
+                        className='group flex h-full items-stretch justify-between gap-[64px] rounded-[5px] bg-[#212121] bg-opacity-60 backdrop-blur-[12px] mobile:h-fit mobile:w-full mobile:flex-col-reverse mobile:p-[12px] desktop:w-fit desktop:flex-row desktop:p-[40px]'
+                        onClick={toggleMenu}
+                        href={routes.offers}
+                    >
+                        <Image
+                            src={offersAnimation}
+                            alt={''}
+                            className='max-h-[250px] max-w-[250px] mobile:hidden desktop:flex'
+                        />
+                        <div className='w-0 border-r-[1px] border-white mobile:hidden desktop:block' />
+                        <div className='flex w-full flex-col justify-between gap-[42px] mobile:max-w-full desktop:w-[161px]'>
+                            <p className='font-primary leading-[170%]'>
+                                Take advantage of our exclusive discount
+                                available only to our first clients
+                            </p>
+
+                            <div className='flex items-center gap-[8px] transition duration-200 group-hover:blur-[4px]'>
+                                OFFERS
+                                <Image
+                                    src={closeArrow}
+                                    alt={''}
+                                    width={42}
+                                    height={42}
+                                    unoptimized={true}
+                                />
+                            </div>
+                        </div>
+                    </ScrollToTopLink>
+
+                    <nav
+                        className={`flex justify-between rounded-[5px] bg-[#212121] bg-opacity-60 backdrop-blur-[12px] mobile:w-full mobile:flex-col mobile:gap-[24px] mobile:p-[12px] desktop:w-[401px] desktop:flex-row desktop:gap-[40px] desktop:px-[80px] desktop:py-[40px]`}
+                    >
+                        <menu className='flex flex-col justify-between gap-[16px] font-primary text-[16px] uppercase mobile:list-none desktop:list-disc'>
+                            {anchorLinks.map(
                                 (link: {
-                                    iconSrc: string
-                                    url: string
                                     title: string
+                                    url: string
                                 }): React.ReactNode => (
-                                    <li key={link.title}>
-                                        <a
-                                            href={link.url}
-                                            className='transition duration-150 ease-out hover:blur-[2px]'
-                                            target='_blank'
-                                        >
-                                            <Image
-                                                width={24}
-                                                height={24}
-                                                src={link.iconSrc}
-                                                alt={link.title}
-                                            />
-                                        </a>
+                                    <li
+                                        onClick={toggleMenu}
+                                        key={link.title}
+                                        className='transition-filter ease w-fit cursor-pointer duration-150 hover:pl-[24px] hover:blur-[2px]'
+                                    >
+                                        <Link href={link.url}>
+                                            {link.title}
+                                        </Link>
                                     </li>
                                 )
                             )}
-                    </menu>
-                </nav>
+                        </menu>
+                        <menu className='flex list-none gap-[24px] mobile:flex-row mobile:justify-start desktop:flex-col '>
+                            {socialLinks &&
+                                socialLinks.map(
+                                    (link: {
+                                        iconSrc: string
+                                        url: string
+                                        title: string
+                                    }): React.ReactNode => (
+                                        <li key={link.title}>
+                                            <a
+                                                href={link.url}
+                                                className='transition duration-150 ease-out hover:blur-[2px]'
+                                                target='_blank'
+                                            >
+                                                <Image
+                                                    width={24}
+                                                    height={24}
+                                                    src={link.iconSrc}
+                                                    alt={link.title}
+                                                />
+                                            </a>
+                                        </li>
+                                    )
+                                )}
+                        </menu>
+                    </nav>
+                </div>
             </div>
         </div>
     )

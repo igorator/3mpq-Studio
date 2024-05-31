@@ -3,6 +3,7 @@ export const routes = {
     contact: '/contact',
     portfolio: '/portfolio',
     privacy: '/privacy-policy',
+    offers: '/offers',
     terms: '/terms',
     cookies: '/cookies-policy',
 }
