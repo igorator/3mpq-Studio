@@ -72,7 +72,7 @@ export const HiddenMenu = () => {
                     }}
                 >
                     <ScrollToTopLink
-                        className='group flex h-full items-stretch justify-between gap-[64px] rounded-[5px] bg-[#212121] bg-opacity-60 backdrop-blur-[12px] mobile:h-fit mobile:w-full mobile:flex-col-reverse mobile:p-[12px] desktop:w-fit desktop:flex-row desktop:p-[40px]'
+                        className='flex h-full items-stretch justify-between gap-[64px] rounded-[5px] bg-[#212121] bg-opacity-60 backdrop-blur-[12px] transition-all duration-200 hover:bg-opacity-80 mobile:h-fit mobile:w-full mobile:flex-col-reverse mobile:p-[12px] desktop:w-fit desktop:flex-row desktop:p-[40px]'
                         onClick={toggleMenu}
                         href={routes.offers}
                     >
@@ -88,7 +88,7 @@ export const HiddenMenu = () => {
                                 available only to our first clients
                             </p>
 
-                            <div className='flex items-center gap-[8px] transition duration-200 group-hover:blur-[4px]'>
+                            <div className='flex items-center gap-[8px] transition duration-200'>
                                 OFFERS
                                 <Image
                                     src={closeArrow}
