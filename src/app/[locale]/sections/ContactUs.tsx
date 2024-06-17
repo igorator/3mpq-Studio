@@ -3,17 +3,19 @@ import { ContactForm } from 'src/components/Forms/ContactForm'
 import { Heading } from 'src/components/Text'
 
 type ContactUsProps = {
-    page?: boolean
+    isPage?: boolean
 }
 
-export const ContactUs = ({ page }: ContactUsProps) => {
+export const ContactUs = ({ isPage }: ContactUsProps) => {
     return (
         <Section
             id={'contact-us'}
-            addStyles={`${page ? '' : 'mobile:pt-[80px] desktop:pt-[100px]'} flex flex-col`}
+            addStyles={`${isPage ? '' : 'mobile:pt-[80px] desktop:pt-[100px]'} flex flex-col`}
         >
-            {!page && <Heading headingLevel={2}>Contact Us</Heading>}
-            <div className={`${page ? '' : 'mt-[64px]'} flex w-full flex-col`}>
+            {!isPage && <Heading headingLevel={2}>Contact Us</Heading>}
+            <div
+                className={`${isPage ? '' : 'mt-[64px]'} flex w-full flex-col`}
+            >
                 <ContactForm />
             </div>
         </Section>

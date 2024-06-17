@@ -8,21 +8,18 @@ import { Pricing } from '../sections/Pricing'
 import { Team } from '../sections/Team'
 import { homePageProjectsData } from 'src/data/projects-data'
 import { MainAnimationWrapper } from 'src/components/PageAnimations/HomeAnimationWrapper'
-import { useTranslations } from 'next-intl'
 
 export default function Home() {
-    const t = useTranslations('Home')
-
     return (
         <main className='relative flex w-full flex-col items-center mobile:pb-[80px] desktop:pb-[150px]'>
             <MainAnimationWrapper>
-                <Hero />
-                <Services />
+                <Hero id='hero' />
+                <Services id='services' />
             </MainAnimationWrapper>
-            <About />
-            <Pricing />
-            <Compass />
-            <Team />
+            <About id='about' />
+            <Pricing id='pricing' />
+            <Compass id='compass' />
+            <Team id='our-team' />
             <Projects id='projects' projects={homePageProjectsData} />
             <ContactUs />
         </main>

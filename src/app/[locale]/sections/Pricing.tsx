@@ -8,7 +8,7 @@ import {
 
 import { getLocale } from 'next-intl/server'
 
-export const Pricing = async () => {
+export async function Pricing({ id }: { id: string }) {
     const locale = await getLocale()
 
     let pricingCardData: PricingCardData[] = []
@@ -20,7 +20,7 @@ export const Pricing = async () => {
     }
 
     return (
-        <Section id='pricing' addStyles='mobile:pt-[80px] desktop:pt-[150px]'>
+        <Section id={id} addStyles='mobile:pt-[80px] desktop:pt-[150px]'>
             <div className='grid w-full gap-[24px] mobile:mt-[16px] mobile:grid-cols-1 mobile:gap-[36px] desktop:mt-[40px] desktop:grid-cols-3'>
                 {pricingCardData.map((card) => (
                     <PricingCard

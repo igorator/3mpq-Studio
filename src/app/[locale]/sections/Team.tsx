@@ -8,9 +8,9 @@ import {
 
 import { teamMemberCardsData } from 'src/data/team-data'
 
-export const Team = () => {
+export function Team({ id }: { id: string }) {
     return (
-        <Section id='our-team'>
+        <Section id={id}>
             <div className='grid w-full gap-[24px] mobile:grid-cols-2 mobile:pt-[16px] desktop:grid-cols-4 desktop:pt-[150px]'>
                 {teamMemberCardsData.map((member, index) => {
                     switch (member.type) {
@@ -37,8 +37,8 @@ export const Team = () => {
                         case 'text':
                             return (
                                 <TeamTextCard
-                                    text={member.text}
                                     key={index}
+                                    text={member.text}
                                     mobileOrder={member.mobileOrder}
                                     desktopOrder={index + 1}
                                     type={'text'}

@@ -1,14 +1,17 @@
 import { Section } from 'src/components/Section'
 import { Accordion } from 'src/components/Accordion/Accordion'
 import { Heading } from 'src/components/Text'
-import { getLocale } from 'next-intl/server'
 import { useTranslations } from 'next-intl'
 import {
     ServicesFaqItem,
     servicesDataEn,
     servicesDataUa,
 } from 'src/data/services-data'
-export const Services = async () => {
+import { getLocale } from 'next-intl/server'
+
+export const Services: React.FC<{
+    id: string
+}> = async ({ id }) => {
     const t = useTranslations()
     const locale = await getLocale()
 
@@ -22,7 +25,7 @@ export const Services = async () => {
 
     return (
         <Section
-            id={'services'}
+            id={id}
             fullWidth={true}
             addStyles='mobile:pt-[16px] desktop:pt-[150px]'
         >

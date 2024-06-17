@@ -1,19 +1,27 @@
+import React from 'react'
 import { Section } from 'src/components/Section'
 import { StaticImageData } from 'next/image'
 import { Heading } from 'src/components/Text'
 import { ShowMoreButton } from 'src/components/Buttons/ShowMoreButton'
 import { ProjectCard } from 'src/components/Cards/ProjectCard'
+import { useTranslations } from 'next-intl'
 
-export const Projects: React.FC<{
+export function Projects({
+    id,
+    projects,
+    page,
+}: {
     id: string
-    page?: boolean
     projects: {
         imgSrc: StaticImageData
         name: string
         description: string
         url: string
     }[]
-}> = ({ id, projects, page }) => {
+    page?: boolean
+}) {
+    const t = useTranslations()
+
     return (
         <Section
             id={id}
@@ -25,7 +33,7 @@ export const Projects: React.FC<{
                         headingLevel={2}
                         additionalStyles='mobile:text-[32px]'
                     >
-                        All our projects
+                        {t('sectionHeadings.Projects')}
                     </Heading>
                 )}
                 <div className='flex w-full flex-col overflow-hidden'>

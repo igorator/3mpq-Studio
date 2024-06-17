@@ -6,14 +6,16 @@ import { GenerateNumberString } from 'src/components/Extra/GenerateNumberElement
 import { motion, useInView } from 'framer-motion'
 import { useTranslations } from 'next-intl'
 
-export const Compass = () => {
+export const Compass: React.FC<{
+    id: string
+}> = ({ id }) => {
     const t = useTranslations()
     const inViewRef = useRef(null)
     const isInView = useInView(inViewRef)
 
     return (
         <Section
-            id='compass'
+            id={id}
             addStyles='flex-col gap-[64px] mobile:pt-[80px] desktop:pt-[150px]'
         >
             <div className='flex h-fit w-full flex-col justify-between gap-[64px]'>
