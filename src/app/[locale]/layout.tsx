@@ -21,6 +21,13 @@ export const metadata: Metadata = {
             'uk-UK': '/ua',
         },
     },
+
+    openGraph: {
+        images: './opengraph-image.png',
+    },
+    twitter: {
+        images: './twitter-image.png',
+    },
 }
 
 export default async function RootLayout({

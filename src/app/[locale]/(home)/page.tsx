@@ -8,7 +8,6 @@ import { Pricing } from '../sections/Pricing'
 import { Team } from '../sections/Team'
 import { homePageProjectsData } from 'src/data/projects-data'
 import { MainAnimationWrapper } from 'src/components/PageAnimations/HomeAnimationWrapper'
-
 import { useTranslations } from 'next-intl'
 
 export default function Home() {

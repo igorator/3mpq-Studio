@@ -34,7 +34,7 @@ export const Header: React.FC = () => {
                         buttonType='highlighted'
                         addStyles='desktop:flex mobile:hidden'
                     >
-                        {t('CTA_Buttons.getInTouch')}
+                        {t('ctaButtons.getInTouch')}
                     </Button>
                 )}
 

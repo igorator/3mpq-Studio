@@ -1,5 +1,10 @@
 {
-    "CTA_Buttons": {
+    "sectionHeadings": {
+        "Services": "Services",
+        "Projects": "All our projects"
+    },
+
+    "ctaButtons": {
         "getInTouch": "Get in touch",
         "orderSite": "Order a site"
     },
@@ -22,7 +27,11 @@
             "MostPopular": "Most Popular"
         },
 
-        "Compass": {},
+        "Compass": {
+            "First": "Estimation & Briefing",
+            "Second": "Research & Analytics",
+            "Third": "Design & Development"
+        },
 
         "About": "We blend innovative design with cutting-edge technology to craft digital experiences that resonate. Our expertise spans React, Next.js, Vue.js, Tailwind, TypeScript, Node.js, Ruby on Rails, PostgreSQL, and Webflow, ensuring we deliver solutions that are not only visually stunning but highly functional. Explore our portfolio to see our dedication to excellence. If our approach to seamless design and robust development strikes a chord, we`ve achieved our mission. Let`s create something extraordinary together."
     }

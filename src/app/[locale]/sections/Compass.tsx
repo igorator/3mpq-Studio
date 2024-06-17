@@ -4,8 +4,10 @@ import { Section } from 'src/components/Section'
 import { DefaultText } from 'src/components/Text'
 import { GenerateNumberString } from 'src/components/Extra/GenerateNumberElements'
 import { motion, useInView } from 'framer-motion'
+import { useTranslations } from 'next-intl'
 
 export const Compass = () => {
+    const t = useTranslations()
     const inViewRef = useRef(null)
     const isInView = useInView(inViewRef)
 
@@ -24,7 +26,7 @@ export const Compass = () => {
                         />
                         <motion.div layout>
                             <DefaultText additionalStyles='flex font-secondary mobile:min-w-[250px] desktop:min-w-[288px] justify-center text-16px py-[12px] bg-white text-black'>
-                                Estimation & Briefing
+                                {t('Home.Compass.First')}
                             </DefaultText>
                         </motion.div>
                         <motion.div
@@ -56,7 +58,7 @@ export const Compass = () => {
                         <div className='w-full border-t-[1px] border-white border-opacity-20' />
 
                         <DefaultText additionalStyles='flex font-secondary mobile:min-w-[250px] desktop:min-w-[288px] justify-center text-16px py-[12px] bg-white text-black'>
-                            Research & Analytics
+                            {t('Home.Compass.Second')}
                         </DefaultText>
 
                         <div
@@ -91,7 +93,7 @@ export const Compass = () => {
                         />
                         <motion.div layout>
                             <DefaultText additionalStyles='flex font-secondary mobile:min-w-[250px] desktop:min-w-[288px] justify-center text-16px py-[12px] bg-white text-black'>
-                                Design & Development
+                                {t('Home.Compass.Third')}
                             </DefaultText>
                         </motion.div>
                         <motion.div

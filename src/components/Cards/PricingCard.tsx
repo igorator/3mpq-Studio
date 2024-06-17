@@ -24,7 +24,7 @@ export const PricingCard: React.FC<{ pricingCardData: PricingCardData }> = ({
             <p className='mt-[16px] font-primary text-[48px] leading-[150%]'>
                 From ${price}
             </p>
-            <PricingButton text={t('CTA_Buttons.orderSite')} />
+            <PricingButton text={t('ctaButtons.orderSite')} />
             <p className='mt-[40px] text-center text-[16px] leading-[200%] mobile:h-fit desktop:h-[70px]'>
                 {subtext}
             </p>

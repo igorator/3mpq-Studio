@@ -28,7 +28,9 @@ export const Services = async () => {
         >
             <div className='relative flex w-full justify-between gap-[80px] desktop:max-w-[1328px]'>
                 <div className='flex w-full shrink flex-col gap-[64px]'>
-                    <Heading headingLevel={2}>{t('Home.Services')}</Heading>
+                    <Heading headingLevel={2}>
+                        {t('sectionHeadings.Services')}
+                    </Heading>
 
                     <div className='flex shrink flex-col'>
                         <Accordion
