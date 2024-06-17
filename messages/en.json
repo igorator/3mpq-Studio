@@ -1,41 +1,29 @@
 {
-    "pageConfig": {
-        "root": {
-            "pageHeading": "Home",
-            "pageText": "We redefine digital landscapes by blending innovative design with the latest technology to create transformative digital experiences. Our bespoke solutions, from web development to branding and beyond, are crafted to captivate your audience and elevate your brand."
-        },
-        "portfolio": {
-            "pageHeading": "Portfolio",
-            "pageText": ""
-        },
-        "contact": {
-            "pageHeading": "Contact",
-            "pageText": ""
-        },
-        "privacy": {
-            "pageHeading": "Privacy Policy",
-            "pageText": ""
-        },
-        "terms": {
-            "pageHeading": "Terms of Service",
-            "pageText": ""
-        },
-        "cookies": {
-            "pageHeading": "Cookie Policy",
-            "pageText": ""
-        },
-        "offers": {
-            "pageHeading": "Offers",
-            "pageText": ""
-        }
+    "CTA_Buttons": {
+        "getInTouch": "Get in touch",
+        "orderSite": "Order a site"
     },
-    "navigation": {
+
+    "pageNavigation": {
+        "homeNavSubtext": "Enjoy your journey",
         "backToHome": "Back to home",
-        "enjoyJourney": "Enjoy your journey",
         "allProjects": "All our projects"
     },
 
+    "hiddenMenu": {
+        "OffersText": "Take advantage of our exclusive discount available only to our first clients",
+        "OffersButtonLabel": "OFFERS"
+    },
+
     "Home": {
+        "Services": "Services",
+
+        "Pricing": {
+            "MostPopular": "Most Popular"
+        },
+
+        "Compass": {},
+
         "About": "We blend innovative design with cutting-edge technology to craft digital experiences that resonate. Our expertise spans React, Next.js, Vue.js, Tailwind, TypeScript, Node.js, Ruby on Rails, PostgreSQL, and Webflow, ensuring we deliver solutions that are not only visually stunning but highly functional. Explore our portfolio to see our dedication to excellence. If our approach to seamless design and robust development strikes a chord, we`ve achieved our mission. Let`s create something extraordinary together."
     }
 }

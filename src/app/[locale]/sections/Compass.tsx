@@ -5,13 +5,13 @@ import { DefaultText } from 'src/components/Text'
 import { GenerateNumberString } from 'src/components/Extra/GenerateNumberElements'
 import { motion, useInView } from 'framer-motion'
 
-export const Compass: React.FC<{ id: string }> = ({ id }) => {
+export const Compass = () => {
     const inViewRef = useRef(null)
     const isInView = useInView(inViewRef)
 
     return (
         <Section
-            id={id}
+            id='compass'
             addStyles='flex-col gap-[64px] mobile:pt-[80px] desktop:pt-[150px]'
         >
             <div className='flex h-fit w-full flex-col justify-between gap-[64px]'>

@@ -4,17 +4,16 @@ export type PricingCardData = {
     price: number
     subtext: string
     benefits: string[]
-    isMostPopular: boolean
+    isMostPopular?: boolean
 }
 
-export const pricingCardsData = [
+export const pricingCardsDataEn = [
     {
         id: 0,
         heading: 'Adapted template site',
         price: 500,
         subtext: 'Ideal for personal projects',
         benefits: ['Fast development', 'Static website', 'Integrations'],
-        isMostPopular: false,
     },
     {
         id: 1,
@@ -30,7 +29,6 @@ export const pricingCardsData = [
         price: 500,
         subtext: 'Ideal for advertising traffic',
         benefits: ['1 page', 'Basic animations', 'Integrations'],
-        isMostPopular: false,
     },
     {
         id: 3,
@@ -38,7 +36,6 @@ export const pricingCardsData = [
         price: 2000,
         subtext: 'Ideal for sales professionals',
         benefits: ['Original design', 'Integrations', 'SEO optimisation'],
-        isMostPopular: false,
     },
     {
         id: 4,
@@ -46,7 +43,6 @@ export const pricingCardsData = [
         price: 3000,
         subtext: 'Suitable for companies',
         benefits: ['Unlimited pages', 'Blog', 'Contact Form'],
-        isMostPopular: false,
     },
     {
         id: 5,
@@ -58,6 +54,55 @@ export const pricingCardsData = [
             'High-tech development',
             'SEO optimisation',
         ],
-        isMostPopular: false,
+    },
+]
+
+export const pricingCardsDataUa = [
+    {
+        id: 0,
+        heading: 'Адаптований шаблон сайту',
+        price: 500,
+        subtext: 'Ідеально підходить для особистих проектів',
+        benefits: ['Швидка розробка', 'Статичний сайт', 'Інтеграції'],
+    },
+    {
+        id: 1,
+        heading: 'Лендінг',
+        price: 1000,
+        subtext: 'Чудово підходить для малого бізнесу',
+        benefits: ['До 3 сторінок', 'Базові анімації', 'Інтеграції'],
+        isMostPopular: true,
+    },
+    {
+        id: 2,
+        heading: 'Сайт-візитівка',
+        price: 500,
+        subtext: 'Ідеально підходить для рекламного трафіку',
+        benefits: ['1 сторінка', 'Basic animations', 'Інтеграції'],
+    },
+    {
+        id: 3,
+        heading: 'Інтернет магазин',
+        price: 2000,
+        subtext: 'Ідеально підходить для фахівців з продажу',
+        benefits: ['Оригінальний дизайн', 'Інтеграції', 'SEO оптимізація'],
+    },
+    {
+        id: 4,
+        heading: 'Корпоративний сайт',
+        price: 3000,
+        subtext: 'Підходить для компаній',
+        benefits: ['Необмежена кількість сторінок', 'Блог', 'Контактна форма'],
+    },
+    {
+        id: 5,
+        heading: 'Індивідуальні рішення',
+        price: 5000,
+        subtext: 'Чудово підходить для просування бренду',
+        benefits: [
+            'Оригінальний дизайн',
+            'Високотехнологічні розробки',
+            'SEO оптимізація',
+        ],
     },
 ]

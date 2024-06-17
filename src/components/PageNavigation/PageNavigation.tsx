@@ -6,11 +6,20 @@ import { Heading } from 'src/components/Text'
 import { usePathname } from '../../navigation'
 import { motion } from 'framer-motion'
 import { routes } from 'src/data/routes'
-import { pageConfig } from 'src/data/page-nav-config'
 import pageNavArrow from '@icons/page-nav-arrow.svg'
+import { useParams } from 'next/navigation'
+import { useTranslations } from 'next-intl'
+import { pageConfigEn, pageConfigUa } from '@data/page-nav-config'
 
 export const PageNavigation = () => {
     const currentPage: string = usePathname()
+    const t = useTranslations()
+    const params = useParams()
+
+    let pageConfig
+    params.locale === 'en'
+        ? (pageConfig = pageConfigEn)
+        : (pageConfig = pageConfigUa)
 
     const { pageHeading, pageText } = pageConfig[currentPage] || ['', '']
 
@@ -50,8 +59,8 @@ export const PageNavigation = () => {
                 </motion.div>
                 <span className='font-secondary text-[16px] opacity-50 transition-all duration-200 mobile:group-hover:opacity-50 desktop:group-hover:opacity-0'>
                     {currentPage === routes.root
-                        ? 'Enjoy your journey'
-                        : 'Back to home'}
+                        ? t('pageNavigation.homeNavSubtext')
+                        : t('pageNavigation.backToHome')}
                 </span>
             </Link>
             <div
@@ -62,7 +71,7 @@ export const PageNavigation = () => {
                     className='flex flex-col justify-end gap-[8px] mobile:w-full mobile:max-w-[341px] desktop:w-[288px]'
                 >
                     <NavLink href={routes.portfolio} currentPage={currentPage}>
-                        All our projects
+                        {t('pageNavigation.allProjects')}
                     </NavLink>
                 </motion.nav>
 

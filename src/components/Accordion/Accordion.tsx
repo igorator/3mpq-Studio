@@ -1,12 +1,10 @@
 'use client'
+import { ServicesFaqItem } from '@data/services-data'
 import { useState } from 'react'
 import { AccordionItem } from 'src/components/Accordion/AccordionItem'
 
-type AccordionProps = {
-    questions: Array<{
-        question: string
-        answer: string
-    }>
+export type AccordionProps = {
+    questions: ServicesFaqItem[]
     accordionType?: 'default' | 'services'
 }
 

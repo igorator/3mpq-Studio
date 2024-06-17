@@ -8,9 +8,11 @@ import { motion } from 'framer-motion'
 import { routes } from 'src/data/routes'
 import { usePathname } from '@navigation'
 import LocaleSwitcher from './LocaleSwitcher/LocaleSwitcher'
+import { useTranslations } from 'next-intl'
 
 export const Header: React.FC = () => {
     const currentPage = usePathname()
+    const t = useTranslations()
     const { isMenuOpen, toggleMenu } = useMenu()
 
     return (
@@ -32,7 +34,7 @@ export const Header: React.FC = () => {
                         buttonType='highlighted'
                         addStyles='desktop:flex mobile:hidden'
                     >
-                        Get in touch
+                        {t('CTA_Buttons.getInTouch')}
                     </Button>
                 )}
 

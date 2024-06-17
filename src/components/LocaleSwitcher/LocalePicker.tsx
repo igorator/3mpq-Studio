@@ -16,10 +16,6 @@ export function LocalePicker({ defaultValue }: LocalePickerProps) {
 
     function onLocaleChange(nextLocale: string) {
         startTransition(() => {
-            console.log(nextLocale)
-            console.log(pathname)
-            console.log(params)
-
             router.replace(
                 // @ts-expect-error -- TypeScript will validate that only known `params`
                 // are used in combination with a given `pathname`. Since the two will

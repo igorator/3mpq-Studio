@@ -4,13 +4,15 @@ import { Link } from '@navigation'
 import Image from 'next/image'
 import { useEffect } from 'react'
 import { useMenu } from 'src/hooks/useMenu'
-import { anchorLinks } from 'src/data/achor-links'
+import { anchorLinksEn, anchorLinksUa } from 'src/data/achor-links'
 import upworkIcon from '@social-icons/upwork.svg'
 import behanceIcon from '@social-icons/behance.svg'
 import closeArrow from '@icons/close-arrow.svg'
 import offersAnimation from '@animations/offers.gif'
 import { ScrollToTopLink } from 'src/components/ScrollToTopLink'
 import { routes } from 'src/data/routes'
+import { useParams } from 'next/navigation'
+import { useTranslations } from 'next-intl'
 
 const socialLinks = [
     {
@@ -27,7 +29,14 @@ const socialLinks = [
 ]
 
 export const HiddenMenu = () => {
+    const locale = useParams().locale
+    const t = useTranslations()
     const { isMenuOpen, toggleMenu } = useMenu()
+
+    let anchorLinks
+    locale === 'en'
+        ? (anchorLinks = anchorLinksEn)
+        : (anchorLinks = anchorLinksUa)
 
     useEffect(() => {
         const bodyStyle = document.body.style
@@ -84,12 +93,11 @@ export const HiddenMenu = () => {
                         <div className='w-0 border-r-[1px] border-white mobile:hidden desktop:block' />
                         <div className='flex w-full flex-col justify-between gap-[42px] mobile:max-w-full desktop:w-[161px]'>
                             <p className='font-primary leading-[170%]'>
-                                Take advantage of our exclusive discount
-                                available only to our first clients
+                                {t('hiddenMenu.OffersText')}
                             </p>
 
-                            <div className='flex items-center gap-[8px] transition duration-200'>
-                                OFFERS
+                            <div className='flex items-center gap-[8px] font-primary transition duration-200'>
+                                {t('hiddenMenu.OffersButtonLabel')}
                                 <Image
                                     src={closeArrow}
                                     alt={''}

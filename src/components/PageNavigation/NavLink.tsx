@@ -9,13 +9,19 @@ type NavLink = {
     children: React.ReactNode
     href: string
     currentPage: string
+    addStyles?: string
 }
 
-export const NavLink: React.FC<NavLink> = ({ children, href, currentPage }) => {
+export const NavLink: React.FC<NavLink> = ({
+    children,
+    href,
+    currentPage,
+    addStyles,
+}) => {
     return (
         <motion.div exit={{ x: -20 }}>
             <Link
-                className={`flex w-full justify-between rounded-[5px] py-[8px] text-center font-primary text-[16px] leading-[170%] transition duration-200 ease-in-out desktop:hover:blur-[2px] ${href === currentPage || currentPage !== routes.root ? 'hidden' : ''}`}
+                className={`flex w-full gap-[8px] rounded-[5px] py-[8px] text-center font-primary text-[16px] leading-[170%] transition duration-200 ease-in-out mobile:justify-between desktop:justify-end desktop:hover:blur-[2px] ${addStyles} ${href === currentPage || currentPage !== routes.root ? 'hidden' : ''}`}
                 href={href}
                 scroll={false}
             >
