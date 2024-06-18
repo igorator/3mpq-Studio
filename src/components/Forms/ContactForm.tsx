@@ -30,7 +30,7 @@ enum FormState {
 
 export const ContactForm = () => {
     const [formState, setFormState] = useState<FormState>(FormState.Default)
-    const t = useTranslations('')
+    const t = useTranslations()
 
     const {
         register,
@@ -113,7 +113,7 @@ export const ContactForm = () => {
                                 mask='999-999-9999'
                                 replacement={{ 9: /\d/ }}
                                 placeholder={t(
-                                    'ContactForm.placeholders.email'
+                                    'ContactForm.placeholders.phone'
                                 )}
                                 disabled={isSubmitting}
                                 errors={errors['phoneNumber']}
@@ -230,13 +230,13 @@ export const ContactForm = () => {
                             }
                             heading={
                                 formState === FormState.Success
-                                    ? 'Success'
-                                    : 'Oh no!'
+                                    ? t('ContactForm.states.success')
+                                    : t('ContactForm.states.error')
                             }
                             text={
                                 formState === FormState.Success
-                                    ? 'An email will arrive in your inbox within 5 minutes'
-                                    : 'Something went wrong! Try again later'
+                                    ? t('ContactForm.states.successMessage')
+                                    : t('ContactForm.states.errorMessage')
                             }
                         />
                     </motion.div>
