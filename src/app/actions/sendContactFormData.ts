@@ -31,6 +31,5 @@ export const sendContactFormData = async (message: ContactFormData) => {
         throw new Error('Error sending contact form data')
     }
 
-    console.log(response)
     return response.json()
 }
