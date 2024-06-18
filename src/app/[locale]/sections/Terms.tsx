@@ -1,6 +1,6 @@
 import { Section } from 'src/components/Section'
 import { TermsCard } from 'src/components/Cards/TermsCards'
-import { TermsCardsProps } from 'src/data/terms-data'
+import { TermsCardsProps } from '@data/types'
 
 export const Terms: React.FC<{ id: string; terms: TermsCardsProps[] }> = ({
     id,
