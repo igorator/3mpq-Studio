@@ -1,5 +1,5 @@
 'use client'
-import Link from 'next/link'
+import { Link } from '@navigation'
 import Image from 'next/image'
 import { NavLink } from 'src/components/PageNavigation/NavLink'
 import { Heading } from 'src/components/Text'

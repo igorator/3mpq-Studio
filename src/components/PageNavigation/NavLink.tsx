@@ -1,5 +1,5 @@
 'use client'
-import Link from 'next/link'
+import { Link } from '@navigation'
 import Image from 'next/image'
 import buttonArrow from '@icons/close-arrow.svg'
 import { motion } from 'framer-motion'
