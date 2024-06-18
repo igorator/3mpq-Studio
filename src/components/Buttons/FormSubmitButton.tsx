@@ -2,10 +2,12 @@ import Image from 'next/image'
 import buttonArrowDark from '@icons/button-arrow-dark.svg'
 
 type FormSubmitButtonProps = {
+    label: string
     disabled?: boolean
 }
 
 export const FormSubmitButton: React.FC<FormSubmitButtonProps> = ({
+    label,
     disabled,
 }) => {
     return (
@@ -15,7 +17,7 @@ export const FormSubmitButton: React.FC<FormSubmitButtonProps> = ({
             disabled={disabled}
         >
             <span className='font-primary leading-[170%] text-[#161616]'>
-                Submit
+                {label}
             </span>
             <Image src={buttonArrowDark} alt='' height={32} width={42} />
         </button>

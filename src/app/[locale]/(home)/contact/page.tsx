@@ -5,7 +5,7 @@ export default function ContactPage() {
     return (
         <main className='relative flex w-full flex-col items-center mobile:pb-[80px] desktop:pb-[120px]'>
             <MainAnimationWrapper>
-                <ContactUs page />
+                <ContactUs isPage />
             </MainAnimationWrapper>
         </main>
     )

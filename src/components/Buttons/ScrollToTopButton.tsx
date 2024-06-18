@@ -2,12 +2,14 @@
 import Image from 'next/image'
 import { useLenisStore } from 'src/hooks/useLenis'
 import arrowTop from '@icons/arrow-top.svg'
+import { useTranslations } from 'next-intl'
 
 type ScrollToTopButtonProps = {
     addStyles?: string
 }
 
 export const ScrollToTopButton = ({ addStyles }: ScrollToTopButtonProps) => {
+    const t = useTranslations()
     const lenisInstance = useLenisStore((state) => state.lenisInstance)
     return (
         <button
@@ -16,7 +18,7 @@ export const ScrollToTopButton = ({ addStyles }: ScrollToTopButtonProps) => {
                 lenisInstance?.scrollTo('top')
             }}
         >
-            Scroll Up
+            {t('ctaButtons.scrollToTop')}
             <Image src={arrowTop} alt={'scroll to top'} />
         </button>
     )

@@ -1,24 +1,11 @@
 import { Section } from 'src/components/Section'
 import { PricingCard } from 'src/components/Cards/PricingCard'
-import {
-    pricingCardsDataEn,
-    pricingCardsDataUa,
-    PricingCardData,
-} from 'src/data/pricing-data'
+import { PricingCardData } from '@data/types'
 
-import { getLocale } from 'next-intl/server'
-
-export async function Pricing({ id }: { id: string }) {
-    const locale = await getLocale()
-
-    let pricingCardData: PricingCardData[] = []
-
-    if (locale === 'en') {
-        pricingCardData = pricingCardsDataEn
-    } else if (locale === 'ua') {
-        pricingCardData = pricingCardsDataUa
-    }
-
+export const Pricing: React.FC<{
+    id: string
+    pricingCardData: PricingCardData[]
+}> = async ({ id, pricingCardData }) => {
     return (
         <Section id={id} addStyles='mobile:pt-[80px] desktop:pt-[150px]'>
             <div className='grid w-full gap-[24px] mobile:mt-[16px] mobile:grid-cols-1 mobile:gap-[36px] desktop:mt-[40px] desktop:grid-cols-3'>

@@ -19,6 +19,7 @@ import formSuccessIcon from '@icons/form-success.svg'
 import formRejectIcon from '@icons/form-error.svg'
 import formSuccessAnimation from '@animations/form-valid.gif'
 import formRejectAnimation from '@animations/form-invalid.gif'
+import { useTranslations } from 'next-intl'
 
 enum FormState {
     Default = 'default',
@@ -29,6 +30,7 @@ enum FormState {
 
 export const ContactForm = () => {
     const [formState, setFormState] = useState<FormState>(FormState.Default)
+    const t = useTranslations('')
 
     const {
         register,
@@ -60,15 +62,18 @@ export const ContactForm = () => {
                         <div className='flex w-full justify-between gap-[24px] mobile:flex-col desktop:flex-row'>
                             <FormInput
                                 type='text'
-                                placeholder='Full Name'
+                                placeholder={t(
+                                    'ContactForm.placeholders.fullName'
+                                )}
                                 errors={errors['fullName']}
                                 disabled={isSubmitting}
                                 register={{
                                     ...register('fullName', {
                                         required: {
                                             value: true,
-                                            message:
-                                                'Please, enter your full name',
+                                            message: t(
+                                                'ContactForm.validationMessages.fullName.emptyField'
+                                            ),
                                         },
                                         minLength: 2,
                                         maxLength: 80,
@@ -78,18 +83,24 @@ export const ContactForm = () => {
 
                             <FormInput
                                 type='email'
-                                placeholder='Work Email'
+                                placeholder={t(
+                                    'ContactForm.placeholders.email'
+                                )}
                                 errors={errors['email']}
                                 disabled={isSubmitting}
                                 register={{
                                     ...register('email', {
                                         required: {
                                             value: true,
-                                            message: 'Please, enter your email',
+                                            message: t(
+                                                'ContactForm.validationMessages.email.emptyField'
+                                            ),
                                         },
                                         pattern: {
                                             value: /^[+\-\p{L}\p{M}\p{N}_]([\p{L}\p{M}\p{N}!#$%&'*+\-\/=?^_`{|}~.]*)@(?=.{4,256}$)(([\p{L}\p{N}\p{M}]+)(([-_]*[\p{L}\p{M}\p{N}])*)[.])+[\p{L}\p{M}]{2,22}$/u,
-                                            message: `Enter valid email: email@example.com`,
+                                            message: t(
+                                                'ContactForm.validationMessages.email.invalidInput'
+                                            ),
                                         },
                                     }),
                                 }}
@@ -101,20 +112,24 @@ export const ContactForm = () => {
                                 type='number'
                                 mask='999-999-9999'
                                 replacement={{ 9: /\d/ }}
-                                placeholder='Phone Number'
+                                placeholder={t(
+                                    'ContactForm.placeholders.email'
+                                )}
                                 disabled={isSubmitting}
                                 errors={errors['phoneNumber']}
                                 register={{
                                     ...register('phoneNumber', {
                                         required: {
                                             value: true,
-                                            message:
-                                                'Please, enter your phone number',
+                                            message: t(
+                                                'ContactForm.validationMessages.phone.emptyField'
+                                            ),
                                         },
                                         pattern: {
                                             value: /^\d{3}-\d{3}-\d{4}$/,
-                                            message:
-                                                'Invalid phone number format',
+                                            message: t(
+                                                'ContactForm.validationMessages.phone.invalidInput'
+                                            ),
                                         },
                                     }),
                                 }}
@@ -122,15 +137,18 @@ export const ContactForm = () => {
 
                             <FormInput
                                 type='text'
-                                placeholder='Company Name'
+                                placeholder={t(
+                                    'ContactForm.placeholders.company'
+                                )}
                                 disabled={isSubmitting}
                                 errors={errors['companyName']}
                                 register={{
                                     ...register('companyName', {
                                         required: {
                                             value: true,
-                                            message:
-                                                'Please, enter your company name',
+                                            message: t(
+                                                'ContactForm.validationMessages.company.emptyField'
+                                            ),
                                         },
                                     }),
                                 }}
@@ -141,12 +159,14 @@ export const ContactForm = () => {
                                 htmlFor='project-info'
                                 className='font-secondary text-[16px] leading-[200%]'
                             >
-                                Reason For Contacting
+                                {t('ContactForm.labels.reasonForContacting')}
                             </label>
 
                             <FormTextArea
                                 type='text'
-                                placeholder='Project Info'
+                                placeholder={t(
+                                    'ContactForm.placeholders.projectInfo'
+                                )}
                                 disabled={isSubmitting}
                                 register={{
                                     ...register('projectInfo', {
@@ -171,9 +191,7 @@ export const ContactForm = () => {
                                     htmlFor='agreement'
                                     className={`${errors['agreement'] ? 'text-[#CB4B59]' : 'text-white'} font-secondary text-[16px] leading-[200%]`}
                                 >
-                                    By submitting this form, you agree to the
-                                    processing of your personal data as
-                                    described in our{' '}
+                                    {t('ContactForm.labels.agreement')}{' '}
                                     <a
                                         className='font-bold text-white underline'
                                         href={routes.cookies}
@@ -184,7 +202,10 @@ export const ContactForm = () => {
                                 </label>
                             </div>
 
-                            <FormSubmitButton disabled={isSubmitting} />
+                            <FormSubmitButton
+                                label={t('ctaButtons.formSubmit')}
+                                disabled={isSubmitting}
+                            />
                         </div>
                     </motion.form>
                 )}

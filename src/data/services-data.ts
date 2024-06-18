@@ -1,7 +1,4 @@
-export type ServicesFaqItem = {
-    question: string
-    answer: string
-}
+import { ServicesFaqItem } from './types'
 
 export const servicesDataEn: ServicesFaqItem[] = [
     {
@@ -24,7 +21,7 @@ export const servicesDataEn: ServicesFaqItem[] = [
 
 export const servicesDataUa: ServicesFaqItem[] = [
     {
-        question: 'UI/UX Design',
+        question: 'UI/UX Дизайн',
         answer: `Підніміть свою цифрову присутність за допомогою наших індивідуальних UI/UX дизайнів, де функціональність зустрічається з красою, гарантуючи, що ваші користувачі насолоджуватимуться кожною взаємодією.`,
     },
     {
@@ -36,7 +33,7 @@ export const servicesDataUa: ServicesFaqItem[] = [
         answer: `Розробляйте надійні та масштабовані серверні застосунки, щоб підтримувати ваші веб- та мобільні рішення.`,
     },
     {
-        question: 'Animation',
+        question: 'Анімаціі',
         answer: `Покращуйте свій контент за допомогою динамічних анімацій, роблячи ваші вебсайти та застосунки більш захоплюючими та інтерактивними.`,
     },
 ]

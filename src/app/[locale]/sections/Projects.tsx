@@ -1,12 +1,11 @@
-import React from 'react'
 import { Section } from 'src/components/Section'
 import { StaticImageData } from 'next/image'
 import { Heading } from 'src/components/Text'
 import { ShowMoreButton } from 'src/components/Buttons/ShowMoreButton'
 import { ProjectCard } from 'src/components/Cards/ProjectCard'
-import { useTranslations } from 'next-intl'
+import { getLocale, getTranslations } from 'next-intl/server'
 
-export function Projects({
+export async function Projects({
     id,
     projects,
     page,
@@ -20,7 +19,8 @@ export function Projects({
     }[]
     page?: boolean
 }) {
-    const t = useTranslations()
+    const locale = await getLocale()
+    const t = await getTranslations()
 
     return (
         <Section

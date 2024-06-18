@@ -1,14 +1,20 @@
 import { Section } from 'src/components/Section'
 import {
-    TeamMemberCard,
     TeamHeaderCard,
     TeamTextCard,
     TeamEmptyCard,
+    TeamAvatarCard,
 } from 'src/components/Cards/TeamMemberCards'
 
-import { teamMemberCardsData } from 'src/data/team-data'
+import { TeamMemberCardType } from '@data/types'
 
-export function Team({ id }: { id: string }) {
+export async function Team({
+    id,
+    teamMemberCardsData,
+}: {
+    id: string
+    teamMemberCardsData: TeamMemberCardType[]
+}) {
     return (
         <Section id={id}>
             <div className='grid w-full gap-[24px] mobile:grid-cols-2 mobile:pt-[16px] desktop:grid-cols-4 desktop:pt-[150px]'>
@@ -24,7 +30,7 @@ export function Team({ id }: { id: string }) {
                             )
                         case 'avatar':
                             return (
-                                <TeamMemberCard
+                                <TeamAvatarCard
                                     key={index}
                                     name={member.name}
                                     jobTitle={member.jobTitle}

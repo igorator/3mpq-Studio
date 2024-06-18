@@ -1,18 +1,11 @@
 'use client'
 
-import Image, { StaticImageData } from 'next/image'
+import Image from 'next/image'
+import { ProjectCardProps } from '@data/types'
 import { Heading, DefaultText, Paragraph } from 'src/components/Text'
-import linkArrow from '@icons/close-arrow.svg'
 import { motion } from 'framer-motion'
-
-interface ProjectCardProps {
-    name: string
-    description: string
-    imgSrc: StaticImageData
-    orderNumber: number
-    url: string
-    scrollBoundary?: string
-}
+import linkArrow from '@icons/close-arrow.svg'
+import { useTranslations } from 'next-intl'
 
 export const ProjectCard: React.FC<ProjectCardProps> = ({
     imgSrc,
@@ -22,6 +15,8 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
     url,
     scrollBoundary,
 }) => {
+    const t = useTranslations()
+
     return (
         <motion.a
             target='_blank'
@@ -42,7 +37,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
             <div className='flex h-full flex-col items-end justify-between gap-[24px]'>
                 {url.length > 0 ? (
                     <span className='self-start rounded-full bg-white px-[16px] text-center font-secondary leading-[200%] text-[#212121]'>
-                        View project
+                        {t('Projects.viewProject')}
                     </span>
                 ) : (
                     <span></span>

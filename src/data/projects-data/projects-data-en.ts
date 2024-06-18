@@ -1,12 +1,4 @@
-import { StaticImageData } from 'next/image'
-import { ProjectSlideProps } from 'src/components/Slider/ProjectSlide'
-
-interface Project {
-    name: string
-    description: string
-    url: string
-    imgSrc: StaticImageData
-}
+import { Project } from '@data/types'
 
 import smarterScout from '@images/projects-images/0Smarterscout.png'
 import pharmbills from '@images/projects-images/1 Pharmbills.png'
@@ -34,31 +26,7 @@ import warmly from '@images/projects-images/22 Warmly.png'
 import tara from '@images/projects-images/23 Tara.png'
 import hrsh from '@images/projects-images/24 hrsh.png'
 
-export const projectsSlides: ProjectSlideProps[] = [
-    {
-        url: 'https://www.behance.net/gallery/164060455/Pharmbills-Redesign',
-        name: 'Pharmbills',
-        imgSrc: pharmbills,
-    },
-    {
-        url: 'https://www.behance.net/gallery/148909183/Customary-Redesign',
-        name: 'Customary',
-        imgSrc: customary,
-    },
-    {
-        url: 'https://www.behance.net/gallery/136608733/Anrobo-NFT-project',
-        name: 'Anrobo',
-        imgSrc: anrobo,
-    },
-
-    {
-        url: 'https://www.behance.net/gallery/164665817/Pharmbills-academy-UIUX-Rebranding',
-        name: 'Pharmbills academy',
-        imgSrc: pharmbillsAcademy,
-    },
-]
-
-export const homePageProjectsData: Project[] = [
+export const homePageProjectsDataEn: Project[] = [
     {
         url: 'https://www.behance.net/gallery/164060455/Pharmbills-Redesign',
         name: 'Pharmbills',
@@ -79,7 +47,7 @@ export const homePageProjectsData: Project[] = [
     },
 ]
 
-export const allProjectsData: Project[] = [
+export const allProjectsDataEn: Project[] = [
     {
         url: 'https://www.behance.net/gallery/193443557/Smarterscout',
         name: 'Smarterscout',

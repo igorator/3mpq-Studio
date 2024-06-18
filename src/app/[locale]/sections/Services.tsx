@@ -1,27 +1,16 @@
 import { Section } from 'src/components/Section'
 import { Accordion } from 'src/components/Accordion/Accordion'
 import { Heading } from 'src/components/Text'
-import { useTranslations } from 'next-intl'
-import {
-    ServicesFaqItem,
-    servicesDataEn,
-    servicesDataUa,
-} from 'src/data/services-data'
-import { getLocale } from 'next-intl/server'
+
+import { ServicesFaqItem } from '@data/types'
+import { getLocale, getTranslations } from 'next-intl/server'
 
 export const Services: React.FC<{
     id: string
-}> = async ({ id }) => {
-    const t = useTranslations()
+    services: ServicesFaqItem[]
+}> = async ({ id, services }) => {
+    const t = await getTranslations()
     const locale = await getLocale()
-
-    let services: ServicesFaqItem[] = []
-
-    if (locale === 'en') {
-        services = servicesDataEn
-    } else if (locale === 'ua') {
-        services = servicesDataUa
-    }
 
     return (
         <Section

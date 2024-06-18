@@ -1,42 +1,8 @@
-import { StaticImageData } from 'next/image'
 import halinsky from '@images/team-photos/Halinsky.webp'
 import kliushnyk from '@images/team-photos/Kliushnyk.webp'
+import { TeamMemberCardType } from './types'
 
-type TeamMemberCard = {
-    type: 'header' | 'avatar' | 'text' | 'empty'
-}
-
-export type HeadingTeamMemberCardType = TeamMemberCard & {
-    type: 'header'
-    title: string
-}
-
-export type AvatarTeamMemberCardType = TeamMemberCard & {
-    type: 'avatar'
-    name: string
-    jobTitle: string
-    imgSrc: StaticImageData
-    desktopOrder?: number | string
-    mobileOrder?: number | string
-}
-
-export type TextTeamMemberCardType = TeamMemberCard & {
-    type: 'text'
-    text: string
-    desktopOrder?: number | string
-    mobileOrder?: number | string
-}
-
-export type EmptyTeamMemberCardType = TeamMemberCard & {
-    type: 'empty'
-}
-
-export const teamMemberCardsData: (
-    | HeadingTeamMemberCardType
-    | AvatarTeamMemberCardType
-    | TextTeamMemberCardType
-    | EmptyTeamMemberCardType
-)[] = [
+export const teamMemberCardsDataEn: TeamMemberCardType[] = [
     {
         type: 'header',
         title: 'Our Team',
@@ -69,6 +35,43 @@ export const teamMemberCardsData: (
         type: 'avatar',
         name: 'KOSTIANTYN HALYNSKYI',
         jobTitle: 'Lead UI/UX Designer',
+        imgSrc: halinsky,
+    },
+]
+
+export const teamMemberCardsDataUa: TeamMemberCardType[] = [
+    {
+        type: 'header',
+        title: 'Наша команда',
+    },
+    {
+        type: 'empty',
+    },
+    {
+        type: 'text',
+        text: `Наша команда складається з висококваліфікованих фахівців, кожен з яких є майстром у своїй галузі
+
+Кожен член команди є експертом у своїй галузі, володіє глибоким розумінням та здатністю до інновацій та виконання.`,
+    },
+    {
+        type: 'empty',
+    },
+    {
+        type: 'empty',
+    },
+    {
+        type: 'avatar',
+        name: 'ІГОР КЛЮШНИК',
+        jobTitle: 'Front-end Розробник',
+        imgSrc: kliushnyk,
+    },
+    {
+        type: 'empty',
+    },
+    {
+        type: 'avatar',
+        name: 'КОСТЯНТИН ГАЛИНСЬКИЙ',
+        jobTitle: 'Lead UI/UX Дизайнер',
         imgSrc: halinsky,
     },
 ]

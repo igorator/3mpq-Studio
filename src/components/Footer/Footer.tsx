@@ -8,8 +8,11 @@ import doubleCircle from '@images/decorative/double-circle.svg'
 import polkaDots from '@images/decorative/polka-dots.svg'
 import upworkIcon from '@social-icons/upwork.svg'
 import behanceIcon from '@social-icons/behance.svg'
+import { getTranslations } from 'next-intl/server'
 
-export const Footer = () => {
+export const Footer = async () => {
+    const t = await getTranslations()
+
     return (
         <footer className='flex w-full max-w-[1440px] flex-col items-center justify-center mobile:gap-[80px] mobile:px-[12px] desktop:gap-[120px] desktop:px-[56px] [&>*]:border-white [&>*]:mobile:border-opacity-100 [&>*]:desktop:border-opacity-50'>
             <div className='w-full grid-cols-2 grid-rows-2 mobile:flex mobile:flex-col mobile:gap-[32px] desktop:grid desktop:gap-0'>
@@ -24,7 +27,7 @@ export const Footer = () => {
                     <ul className='text-16px text-none flex h-full flex-col justify-start font-secondary not-italic leading-[200%] mobile:items-start desktop:items-end '>
                         <li>
                             <address className='uppercase not-italic'>
-                                Web design & devlopment
+                                {t('Footer.webDesign')}
                             </address>
                         </li>
                         <li>
@@ -47,7 +50,7 @@ export const Footer = () => {
                     <div className='flex h-full flex-wrap justify-between pt-[5px] mobile:flex-row desktop:flex-col'>
                         <ScrollToTopButton />
 
-                        <div className='flex items-center justify-between gap-[20px]'>
+                        <div className='flex items-center justify-start gap-[20px]'>
                             <a href='https://www.behance.net/empq'>
                                 <Image
                                     src={behanceIcon}

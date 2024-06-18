@@ -15,8 +15,8 @@
         "incremental": true,
         "plugins": [
             {
-                "name": "next",
-            },
+                "name": "next"
+            }
         ],
         "baseUrl": ".",
         "paths": {
@@ -33,10 +33,11 @@
             "@helpers/*": ["helpers/*"],
             "@actions/*": ["src/app/actions/*"],
             "@next/third-parties/google": [
-                "./node_modules/@next/third-parties/dist/google",
+                "./node_modules/@next/third-parties/dist/google"
             ],
             "@navigation": ["src/navigation"],
-        },
+            "@types": ["src/data/types"]
+        }
     },
     "include": [
         "next-env.d.ts",
@@ -44,7 +45,7 @@
         "**/*.tsx",
         ".next/types/**/*.ts",
         "dist/types/**/*.ts",
-        "build/types/**/*.ts",
+        "build/types/**/*.ts"
     ],
-    "exclude": ["node_modules"],
+    "exclude": ["node_modules"]
 }

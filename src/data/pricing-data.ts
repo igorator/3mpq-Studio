@@ -1,12 +1,3 @@
-export type PricingCardData = {
-    id: number
-    heading: string
-    price: number
-    subtext: string
-    benefits: string[]
-    isMostPopular?: boolean
-}
-
 export const pricingCardsDataEn = [
     {
         id: 0,

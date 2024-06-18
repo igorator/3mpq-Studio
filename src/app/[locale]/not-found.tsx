@@ -2,8 +2,11 @@ import { Logo } from 'src/components/Logo'
 import { DefaultText } from 'src/components/Text'
 import { NotFoundTyping } from '@custom-animations/TypingAnimation'
 import { FooterNavItems } from 'src/components/Footer/FooterNavItems'
+import { getTranslations } from 'next-intl/server'
 
-export default function NotFound() {
+export default async function NotFound() {
+    const t = await getTranslations()
+
     return (
         <main className='flex h-[90dvh] w-full max-w-[1440px] flex-col justify-between mobile:px-[16px] desktop:px-[64px]'>
             <header className='flex w-full max-w-[1440px] justify-between mobile:pt-[16px] desktop:pt-[32px]'>
@@ -15,11 +18,11 @@ export default function NotFound() {
                 <DefaultText additionalStyles='font-secondary opacity-50'>
                     <NotFoundTyping
                         sequence={[
-                            'Page not found...',
+                            t('NotFound.First'),
                             2000,
-                            'We`re sorry...',
+                            t('NotFound.Second'),
                             1000,
-                            'We can pass it through together...',
+                            t('NotFound.Third'),
                             2000,
                             '3mpq...',
                             1000,

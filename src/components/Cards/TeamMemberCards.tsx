@@ -5,7 +5,7 @@ import {
     AvatarTeamMemberCardType,
     TextTeamMemberCardType,
     EmptyTeamMemberCardType,
-} from 'src/data/team-data'
+} from 'src/data/types'
 
 const commonStyles =
     'flex mobile:h-[280px] desktop:h-[467px] justify-center rounded-[5px] desktop:py-[40px] mobile:py-[24px] mobile:px-[10px]'
@@ -24,7 +24,7 @@ export const TeamHeaderCard: React.FC<HeadingTeamMemberCardType> = ({
     )
 }
 
-export const TeamMemberCard: React.FC<AvatarTeamMemberCardType> = ({
+export const TeamAvatarCard: React.FC<AvatarTeamMemberCardType> = ({
     name,
     jobTitle,
     imgSrc,
