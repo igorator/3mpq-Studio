@@ -30,6 +30,14 @@
             "agreement": "By submitting this form, you agree to the processing of your personal data as described in our"
         },
 
+        "states": {
+            "success": "Success",
+            "successMessage": "An email will arrive in your inbox within 5 minutes",
+
+            "error": "Oh no!",
+            "errorMessage": "Something went wrong! Try again later"
+        },
+
         "validationMessages": {
             "fullName": {
                 "emptyField": "Enter your name"
