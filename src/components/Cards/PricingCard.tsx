@@ -1,5 +1,5 @@
-import { PricingCardData } from 'src/data/pricing-data'
 import Image from 'next/image'
+import { PricingCardData } from '@data/types'
 import pricingCheck from '@icons/pricing-check.svg'
 import { PricingButton } from 'src/components/Buttons/PricingButton'
 
