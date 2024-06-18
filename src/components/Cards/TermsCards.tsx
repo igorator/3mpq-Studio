@@ -1,6 +1,6 @@
 'use client'
 
-import { type TermsCardsProps } from 'src/data/terms-data'
+import { TermsCardsProps } from '@data/types'
 import { motion } from 'framer-motion'
 
 export const TermsCard = ({ title, text }: TermsCardsProps) => {
