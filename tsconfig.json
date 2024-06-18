@@ -1,82 +1,51 @@
 {
-  "compilerOptions": {
-    "target": "es5",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
+    "compilerOptions": {
+        "target": "es5",
+        "lib": ["dom", "dom.iterable", "esnext"],
+        "allowJs": true,
+        "skipLibCheck": true,
+        "strict": true,
+        "noEmit": true,
+        "esModuleInterop": true,
+        "module": "esnext",
+        "moduleResolution": "bundler",
+        "resolveJsonModule": true,
+        "isolatedModules": true,
+        "jsx": "preserve",
+        "incremental": true,
+        "plugins": [
+            {
+                "name": "next"
+            }
+        ],
+        "baseUrl": ".",
+        "paths": {
+            "@components/*": ["src/components/*"],
+            "@public/*": ["public/*"],
+            "@data/*": ["src/data/*"],
+            "@hooks/*": ["src/hooks/*"],
+            "@ui/*": ["src/app/ui/*"],
+            "@images/*": ["public/images/*"],
+            "@icons/*": ["public/icons/*"],
+            "@social-icons/*": ["public/social-icons/*"],
+            "@animations/*": ["public/animations/*"],
+            "@custom-animations/*": ["src/app/ui/custom-animations/*"],
+            "@helpers/*": ["helpers/*"],
+            "@actions/*": ["src/app/actions/*"],
+            "@next/third-parties/google": [
+                "./node_modules/@next/third-parties/dist/google"
+            ],
+            "@navigation": ["src/navigation"],
+            "@types": ["src/data/types"]
+        }
+    },
+    "include": [
+        "next-env.d.ts",
+        "**/*.ts",
+        "**/*.tsx",
+        ".next/types/**/*.ts",
+        "dist/types/**/*.ts",
+        "build/types/**/*.ts"
     ],
-    "allowJs": true,
-    "skipLibCheck": true,
-    "strict": true,
-    "noEmit": true,
-    "esModuleInterop": true,
-    "module": "esnext",
-    "moduleResolution": "bundler",
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "jsx": "preserve",
-    "incremental": true,
-    "plugins": [
-      {
-        "name": "next"
-      }
-    ],
-    "baseUrl": ".",
-    "paths": {
-      "@components/*": [
-        "components/*"
-      ],
-      "@sections/*": [
-        "app/sections/*"
-      ],
-      "@public/*": [
-        "public/*"
-      ],
-      "@data/*": [
-        "data/*"
-      ],
-      "@hooks/*": [
-        "hooks/*"
-      ],
-      "@ui/*": [
-        "app/ui/*"
-      ],
-      "@images/*": [
-        "public/images/*"
-      ],
-      "@icons/*": [
-        "public/icons/*"
-      ],
-      "@social-icons/*": [
-        "public/social-icons/*"
-      ],
-      "@animations/*": [
-        "public/animations/*"
-      ],
-      "@custom-animations/*": [
-        "app/ui/custom-animations/*"
-      ],
-      "@helpers/*": [
-        "helpers/*"
-      ],
-      "@actions/*": [
-        "app/actions/*"
-      ],
-      "@next/third-parties/google": [
-        "./node_modules/@next/third-parties/dist/google"
-      ]
-    }
-  },
-  "include": [
-    "next-env.d.ts",
-    "**/*.ts",
-    "**/*.tsx",
-    ".next/types/**/*.ts",
-    "dist/types/**/*.ts",
-    "build/types/**/*.ts"
-  ],
-  "exclude": [
-    "node_modules"
-  ]
+    "exclude": ["node_modules"]
 }
