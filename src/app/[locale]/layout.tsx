@@ -8,8 +8,6 @@ import { GeistMono } from 'geist/font/mono'
 import { PageWrapper } from 'src/components/PageWrapper'
 import { HiddenMenu } from 'src/components/HiddenMenu/HiddenMenu'
 import { SmoothScroll } from 'src/components/SmoothScroll'
-import { locales } from 'src/config'
-import { unstable_setRequestLocale } from 'next-intl/server'
 
 export const metadata: Metadata = {
     title: '3mpq Studio',
@@ -38,10 +36,6 @@ export const metadata: Metadata = {
     },
 }
 
-export function generateStaticParams() {
-    return locales.map((locale) => ({ locale }))
-}
-
 export default async function RootLayout({
     children,
     params: { locale },
@@ -50,7 +44,6 @@ export default async function RootLayout({
     params: { locale: string }
 }) {
     const messages = await getMessages()
-    unstable_setRequestLocale(locale)
 
     return (
         <html
