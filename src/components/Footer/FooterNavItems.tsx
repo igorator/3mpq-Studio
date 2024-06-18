@@ -1,6 +1,6 @@
 import { routes } from 'src/data/routes'
 import { ScrollToTopLink } from 'src/components/ScrollToTopLink'
-import Link from 'next/link'
+import { Link } from '@navigation'
 import { getTranslations } from 'next-intl/server'
 
 const footerLinkStyles = 'uppercase transition duration-150 hover:blur-[2px]'

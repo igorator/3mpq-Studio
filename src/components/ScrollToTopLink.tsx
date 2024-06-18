@@ -1,6 +1,6 @@
 'use client'
 
-import Link from 'next/link'
+import { Link } from '@navigation'
 import { useLenisStore } from 'src/hooks/useLenis'
 
 export const ScrollToTopLink: React.FC<{

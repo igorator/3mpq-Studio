@@ -1,4 +1,4 @@
-import Link from 'next/link'
+import { Link } from '@navigation'
 import Image from 'next/image'
 import { routes } from 'src/data/routes'
 import { Paragraph } from 'src/components/Text'
