@@ -29,7 +29,7 @@ export const CookieConsent = () => {
         >
             <span className='w-fit text-pretty font-secondary text-black'>
                 {t('CookiesBanner.text')}{' '}
-                <ScrollToTopLink href={routes.privacy} className='underline'>
+                <ScrollToTopLink href={routes.cookies} className='underline'>
                     Cookie Policy
                 </ScrollToTopLink>
                 .
