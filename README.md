@@ -1,3 +1,5 @@
+![Cover](https://github.com/user-attachments/assets/f9eceb22-7b4e-4166-ae75-d84c11765359)
+
 # 3mpq Studio  
 
 🌐 **Website**  
