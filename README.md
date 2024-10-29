@@ -13,4 +13,5 @@
 - **Internationalization:** next-intl  
 
 📂 **Connected Projects**  
+
 This website is integrated with our [Studio Dashboard on GitHub](https://github.com/igorator/studio-dashboard), designed for streamlined management and content updates.
