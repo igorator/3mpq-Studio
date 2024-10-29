@@ -3,8 +3,8 @@
 # 3mpq Studio  
 
 🌐 **Website**  
-[English Version](https://www.3mpq.com/en)  
-[Ukrainian Version](https://www.3mpq.com/ua)  
+
+[English Version](https://www.3mpq.com/en)  - [Ukrainian Version](https://www.3mpq.com/ua)  
 
 💻 **Tech Stack**  
 - **Frontend:** Next.js, TypeScript, Tailwind CSS, React Hook Form  
