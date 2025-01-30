@@ -85,11 +85,6 @@ export const HiddenMenu = () => {
                         onClick={toggleMenu}
                         href={routes.offers}
                     >
-                        <Image
-                            src={offersAnimation}
-                            alt={''}
-                            className='max-h-[250px] max-w-[250px] mobile:hidden desktop:flex'
-                        />
                         <div className='w-0 border-r-[1px] border-white mobile:hidden desktop:block' />
                         <div className='flex w-full flex-col justify-between gap-[42px] mobile:max-w-full desktop:w-[161px]'>
                             <p className='font-primary leading-[170%]'>
