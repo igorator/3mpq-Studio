@@ -8,7 +8,6 @@ import { anchorLinksEn, anchorLinksUa } from 'src/data/achor-links'
 import upworkIcon from '@social-icons/upwork.svg'
 import behanceIcon from '@social-icons/behance.svg'
 import closeArrow from '@icons/close-arrow.svg'
-import offersAnimation from '@animations/offers.gif'
 import { ScrollToTopLink } from 'src/components/ScrollToTopLink'
 import { routes } from 'src/data/routes'
 import { useParams } from 'next/navigation'
@@ -85,11 +84,6 @@ export const HiddenMenu = () => {
                         onClick={toggleMenu}
                         href={routes.offers}
                     >
-                        <Image
-                            src={offersAnimation}
-                            alt={''}
-                            className='max-h-[250px] max-w-[250px] mobile:hidden desktop:flex'
-                        />
                         <div className='w-0 border-r-[1px] border-white mobile:hidden desktop:block' />
                         <div className='flex w-full flex-col justify-between gap-[42px] mobile:max-w-full desktop:w-[161px]'>
                             <p className='font-primary leading-[170%]'>
